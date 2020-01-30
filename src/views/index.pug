@@ -1,10 +1,345 @@
 extends layouts/default
 include helpers/mixins
+include ../blocks/modules/header/header
+include ../blocks/modules/footer/footer
+include ../blocks/modules/statistic/statistic
 
 block variables
-	- const title = "gulp-pug-starter"
+	- const title = "Essaysampler"
+
+block styles
+	link(rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+	link(rel="stylesheet" href="slick/slick-theme.css")
+	link(rel="stylesheet" href="../styles/index.css")
 
 block content
+	+header
+		.logo
+			span.logo__icon
+				svg(viewBox="0 0 32 34" class="icon")
+					use(xlink:href="img/sprites/sprite.svg#logo")
+			span.logo__text.subtitle.subtitle--dark EssaySampler
+	section.section.section--intro
+		.container
+			.section__content
+				.page-subtitle.subtitle Find Inspiration and Create Original Writings
+				h1.page-title.hero-title Samples of Academic Essays
+				+statistic
+			.section__illustration
+				img(src="img/intro-decoration.png" alt="intro block decorative illustration")
+
+	section.section.section--popular-samples
+		.container
+			h2.block-title Most Popular Samples
+			.slider
+				.slider__item.essay-card
+					h3.essay-card__title.heading
+						| Wearing Uniforms at School Should not be Obligatory
+					p.essay-card__desc.body-text
+						| Contrary to popular belief, Lorem Ipsum is not simply random text.
+						| It has roots in a piece of classical Latin literature from 45 BC ....
+					a.essay-card__link.link(href="#")
+				.slider__item.essay-card
+					h3.essay-card__title.heading
+						| Wearing Uniforms at School Should not be Obligatory
+					p.essay-card__desc.body-text
+						| Contrary to popular belief, Lorem Ipsum is not simply random text.
+						| It has roots in a piece of classical Latin literature from 45 BC ....
+					a.essay-card__link.link(href="#")
+				.slider__item.essay-card
+					h3.essay-card__title.heading
+						| Wearing Uniforms at School Should not be Obligatory
+					p.essay-card__desc.body-text
+						| Contrary to popular belief, Lorem Ipsum is not simply random text.
+						| It has roots in a piece of classical Latin literature from 45 BC ....
+					a.essay-card__link.link(href="#")
+				.slider__item.essay-card
+					h3.essay-card__title.heading
+						| Wearing Uniforms at School Should not be Obligatory
+					p.essay-card__desc.body-text
+						| Contrary to popular belief, Lorem Ipsum is not simply random text.
+						| It has roots in a piece of classical Latin literature from 45 BC ....
+					a.essay-card__link.link(href="#")
+				.slider__item.essay-card
+					h3.essay-card__title.heading
+						| Wearing Uniforms at School Should not be Obligatory
+					p.essay-card__desc.body-text
+						| Contrary to popular belief, Lorem Ipsum is not simply random text.
+						| It has roots in a piece of classical Latin literature from 45 BC ....
+					a.essay-card__link.link(href="#")
+				.slider__item.essay-card
+					h3.essay-card__title.heading
+						| Wearing Uniforms at School Should not be Obligatory
+					p.essay-card__desc.body-text
+						| Contrary to popular belief, Lorem Ipsum is not simply random text.
+						| It has roots in a piece of classical Latin literature from 45 BC ....
+					a.essay-card__link.link(href="#")
+				.slider__item.essay-card
+					h3.essay-card__title.heading
+						| Wearing Uniforms at School Should not be Obligatory
+					p.essay-card__desc.body-text
+						| Contrary to popular belief, Lorem Ipsum is not simply random text.
+						| It has roots in a piece of classical Latin literature from 45 BC ....
+					a.essay-card__link.link(href="#")
+				.slider__item.essay-card
+					h3.essay-card__title.heading
+						| Wearing Uniforms at School Should not be Obligatory
+					p.essay-card__desc.body-text
+						| Contrary to popular belief, Lorem Ipsum is not simply random text.
+						| It has roots in a piece of classical Latin literature from 45 BC ....
+					a.essay-card__link.link(href="#")
+			a.link(href="#") List of all Essay Samples
+
+	section.section.section--paper-types
+		.container
+			.section__illustration
+				img(src="img/paper-types-decoration.png" alt="paper types decoratibe illustration")
+			h2.block-title Paper Types of Samples
+			ul.papers-list
+				li.papers-list__item
+					a.papers-list__link.link.link--unbordered(href="#")
+						span.papers-list__icon
+							svg(width="17" height="17" class="icon")
+								use(xlink:href="img/sprites/sprite.svg#topic")
+						| Course work
+				li.papers-list__item
+					a.papers-list__link.link.link--unbordered(href="#")
+						span.papers-list__icon
+								svg(width="17" height="17" class="icon")
+									use(xlink:href="img/sprites/sprite.svg#topic")
+						| Essay
+				li.papers-list__item
+					a.papers-list__link.link.link--unbordered(href="#")
+						span.papers-list__icon
+							svg(width="17" height="17" class="icon")
+								use(xlink:href="img/sprites/sprite.svg#topic")
+						| Presentation
+				li.papers-list__item
+					a.papers-list__link.link.link--unbordered(href="#")
+						span.papers-list__icon
+							svg(width="17" height="17" class="icon")
+								use(xlink:href="img/sprites/sprite.svg#topic")
+						| Movie review
+				li.papers-list__item
+					a.papers-list__link.link.link--unbordered(href="#")
+						span.papers-list__icon
+							svg(width="17" height="17" class="icon")
+								use(xlink:href="img/sprites/sprite.svg#topic")
+						| Problem solving
+				li.papers-list__item
+					a.papers-list__link.link.link--unbordered(href="#")
+						span.papers-list__icon
+							svg(width="17" height="17" class="icon")
+								use(xlink:href="img/sprites/sprite.svg#topic")
+						| Research proposal
+				li.papers-list__item
+					a.papers-list__link.link.link--unbordered(href="#")
+						span.papers-list__icon
+							svg(width="17" height="17" class="icon")
+								use(xlink:href="img/sprites/sprite.svg#topic")
+						| Case study
+				li.papers-list__item
+					a.papers-list__link.link.link--unbordered(href="#")
+						span.papers-list__icon
+							svg(width="17" height="17" class="icon")
+								use(xlink:href="img/sprites/sprite.svg#topic")
+						| Questions &amp; answers
+				li.papers-list__item
+					a.papers-list__link.link.link--unbordered(href="#")
+						span.papers-list__icon
+							svg(width="17" height="17" class="icon")
+								use(xlink:href="img/sprites/sprite.svg#topic")
+						| Report
+				li.papers-list__item
+					a.papers-list__link.link.link--unbordered(href="#")
+						span.papers-list__icon
+							svg(width="17" height="17" class="icon")
+								use(xlink:href="img/sprites/sprite.svg#topic")
+						| Literature review
+				li.papers-list__item
+					a.papers-list__link.link.link--unbordered(href="#")
+						span.papers-list__icon
+							svg(width="17" height="17" class="icon")
+								use(xlink:href="img/sprites/sprite.svg#topic")
+						| Book review
+				li.papers-list__item
+					a.papers-list__link.link.link--unbordered(href="#")
+						span.papers-list__icon
+							svg(width="17" height="17" class="icon")
+								use(xlink:href="img/sprites/sprite.svg#topic")
+						| Annotated bibliography
+				li.papers-list__item
+					a.papers-list__link.link.link--unbordered(href="#")
+						span.papers-list__icon
+							svg(width="17" height="17" class="icon")
+								use(xlink:href="img/sprites/sprite.svg#topic")
+						| Research paper
+				li.papers-list__item
+					a.papers-list__link.link.link--unbordered(href="#")
+						span.papers-list__icon
+							svg(width="17" height="17" class="icon")
+								use(xlink:href="img/sprites/sprite.svg#topic")
+						| Article review
+				li.papers-list__item
+					a.papers-list__link.link.link--unbordered(href="#")
+						span.papers-list__icon
+							svg(width="17" height="17" class="icon")
+								use(xlink:href="img/sprites/sprite.svg#topic")
+						| Capstone project
+				li.papers-list__item
+					a.papers-list__link.link.link--unbordered(href="#")
+						span.papers-list__icon
+							svg(width="17" height="17" class="icon")
+								use(xlink:href="img/sprites/sprite.svg#topic")
+						| Business plan
+				li.papers-list__item
+					a.papers-list__link.link.link--unbordered(href="#")
+						span.papers-list__icon
+							svg(width="17" height="17" class="icon")
+								use(xlink:href="img/sprites/sprite.svg#topic")
+						| Critical thinking
+				li.papers-list__item
+					a.papers-list__link.link.link--unbordered(href="#")
+						span.papers-list__icon
+							svg(width="17" height="17" class="icon")
+								use(xlink:href="img/sprites/sprite.svg#topic")
+						| Summary
+				li.papers-list__item
+					a.papers-list__link.link.link--unbordered(href="#")
+						span.papers-list__icon
+							svg(width="17" height="17" class="icon")
+								use(xlink:href="img/sprites/sprite.svg#topic")
+						| Dissertation introduction
+				li.papers-list__item
+					a.papers-list__link.link.link--unbordered(href="#")
+						span.papers-list__icon
+							svg(width="17" height="17" class="icon")
+								use(xlink:href="img/sprites/sprite.svg#topic")
+						| Term paper
+				li.papers-list__item
+					a.papers-list__link.link.link--unbordered(href="#")
+						span.papers-list__icon
+							svg(width="17" height="17" class="icon")
+								use(xlink:href="img/sprites/sprite.svg#topic")
+						| Argumentative essay
+
+	section.section.section--subject
+		.container
+			h2.block-title Subjects of Samples
+			ul.subjects-list
+				li.subjects-list__item.subject-card
+					ul.subject-card__list
+						li.subject-card__list-item.body-text Biology
+						li.subject-card__list-item.body-text Anatomy
+						li.subject-card__list-item.body-text Botanics
+						li.subject-card__list-item.body-text Geography
+						li.subject-card__list-item.body-text Ecology
+						li.subject-card__list-item.body-text Medicine
+						li.subject-card__list-item.body-text Nursing
+						li.subject-card__list-item.body-text Chemistry
+				li.subjects-list__item.subject-card
+					ul.subject-card__list
+						li.subject-card__list-item.body-text Marketing
+						li.subject-card__list-item.body-text Business
+						li.subject-card__list-item.body-text Law
+						li.subject-card__list-item.body-text Management
+						li.subject-card__list-item.body-text Economics
+						li.subject-card__list-item.body-text Leadership
+						li.subject-card__list-item.body-text English
+				li.subjects-list__item.subject-card
+					ul.subject-card__list
+						li.subject-card__list-item.body-text Philosophy
+						li.subject-card__list-item.body-text Culture
+						li.subject-card__list-item.body-text Psychology
+						li.subject-card__list-item.body-text Sociology
+						li.subject-card__list-item.body-text Health Care
+						li.subject-card__list-item.body-text Religious Studies
+				li.subjects-list__item.subject-card
+					ul.subject-card__list
+						li.subject-card__list-item.body-text Maths
+						li.subject-card__list-item.body-text Physics
+						li.subject-card__list-item.body-text Engineering
+						li.subject-card__list-item.body-text Computer Science
+
+	section.section.section--topics
+		.container
+			h2.block-title Topics of Essay Samples
+			ul.topics-list
+				li.topics-list__item
+					a.topics-list__link.link.link--unbordered(href="#")
+						span.topics-list__icon
+							svg(width="20" height="20")
+								use(xlink:href="img/sprites/sprite.svg#pencil")
+						span.topics-list__body
+							| A Proposal of Guidelines for Starting An "Analytical Unit"...
+				li.topics-list__item
+					a.topics-list__link.link.link--unbordered(href="#")
+						span.topics-list__icon
+							svg(width="20" height="20")
+								use(xlink:href="img/sprites/sprite.svg#pencil")
+						span.topics-list__body
+							| Describe Some of the Characteristics of Life in the British Colonies
+				li.topics-list__item
+					a.topics-list__link.link.link--unbordered(href="#")
+						span.topics-list__icon
+							svg(width="20" height="20")
+								use(xlink:href="img/sprites/sprite.svg#pencil")
+						span.topics-list__body
+							| Hypopituitarism Disease Process
+				li.topics-list__item
+					a.topics-list__link.link.link--unbordered(href="#")
+						span.topics-list__icon
+							svg(width="20" height="20")
+								use(xlink:href="img/sprites/sprite.svg#pencil")
+						span.topics-list__body
+							| To Educate or Train Leaders
+				li.topics-list__item
+					a.topics-list__link.link.link--unbordered(href="#")
+						span.topics-list__icon
+							svg(width="20" height="20")
+								use(xlink:href="img/sprites/sprite.svg#pencil")
+						span.topics-list__body
+							| Cost Accounting in the Banking Industry
+				li.topics-list__item
+					a.topics-list__link.link.link--unbordered(href="#")
+						span.topics-list__icon
+							svg(width="20" height="20")
+								use(xlink:href="img/sprites/sprite.svg#pencil")
+						span.topics-list__body
+							| A Case Study of Corporate Governance Failure
+				li.topics-list__item
+					a.topics-list__link.link.link--unbordered(href="#")
+						span.topics-list__icon
+							svg(width="20" height="20")
+								use(xlink:href="img/sprites/sprite.svg#pencil")
+						span.topics-list__body
+							| Designing Organizations for the International Environment
+				li.topics-list__item
+					a.topics-list__link.link.link--unbordered(href="#")
+						span.topics-list__icon
+							svg(width="20" height="20")
+								use(xlink:href="img/sprites/sprite.svg#pencil")
+						span.topics-list__body
+							| Interorganizational Relationships
+				li.topics-list__item
+					a.topics-list__link.link.link--unbordered(href="#")
+						span.topics-list__icon
+							svg(width="20" height="20")
+								use(xlink:href="img/sprites/sprite.svg#pencil")
+						span.topics-list__body
+							| Humanities Through the Arts
+				li.topics-list__item
+					a.topics-list__link.link.link--unbordered(href="#")
+						span.topics-list__icon
+							svg(width="20" height="20")
+								use(xlink:href="img/sprites/sprite.svg#pencil")
+						span.topics-list__body
+							| Karl Marx's Contribution to Sociological Theory
+			a.link(href="#") List of all Essay Samples
+			.section__illustration
+				img(src="img/topics-decoration.png" alt="Topics decorative illustration")
+
+	+footer
 
 block scripts
 	script(src="../js/main.js")

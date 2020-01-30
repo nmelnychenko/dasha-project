@@ -1,0 +1,164 @@
+.block-title {
+  margin-bottom: 60px;
+}
+
+.section--intro {
+  position: relative;
+  padding-top: 52px;
+  padding-bottom: 48px;
+
+  .page-subtitle {
+    margin-bottom: 20px;
+  }
+
+  .page-title {
+    margin-bottom: 90px;
+    max-width: 648px;
+  }
+
+  .section__illustration {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 744px;
+    height: 415px;
+  }
+}
+
+.section--popular-samples {
+  padding-top: 34px;
+  padding-bottom: 50px;
+  background: #D7E8F2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  .block-title {
+    margin-bottom: 50px;
+  }
+
+  .slider {
+    margin-bottom: 42px;
+    width: 100%;
+
+    .slick-slide {
+      padding: 10px 0;
+      margin: 0 8px;
+    }
+  }
+
+  .slider__item {
+    width: auto !important;
+    padding: 30px 32px 50px 28px;
+    background: #fff;
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.essay-card__title {
+  margin-bottom: 6px;
+}
+
+.essay-card__desc {
+  margin-bottom: 16px;
+}
+
+.section--paper-types {
+  position: relative;
+  padding-top: 34px;
+  padding-bottom: 105px;
+
+  .section__illustration {
+    position: absolute;
+    right: 0;
+    top: 100px;
+    width: 330px;
+    height: 306px;
+  }
+}
+
+.papers-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 280px;
+  width: 800px;
+}
+
+.papers-list__item {
+  width: 260px;
+  margin-right: 16px;
+  margin-bottom: 20px;
+}
+
+.papers-list__link {
+  display: flex;
+  align-items: center;
+}
+
+.papers-list__icon {
+  flex-shrink: 0;
+  width: 17px;
+  height: 17px;
+  margin-right: 15px;
+}
+
+.section--subject {
+  padding-top: 35px;
+  padding-bottom: 118px;
+  background: #D7E8F2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.subjects-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subjects-list__item {
+  width: 220px;
+  height: 300px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
+}
+
+.section--topics {
+  position: relative;
+  padding-top: 35px;
+  padding-bottom: 68px;
+
+  .section__illustration {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    width: 312px;
+    height: 166px;
+  }
+}
+
+.subject-card {
+  padding: 40px 35px 20px 38px;
+}
+
+.subject-card__list-item {
+  margin-bottom: 6px;
+}
+
+.topics-list {
+  column-count: 2;
+  margin: 0 -40px 16px;
+}
+
+.topics-list__item {
+  width: 476px;
+  margin: 0 40px 20px;
+}
+
+.topics-list__link {
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+.topics-list__icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 36px;
+}

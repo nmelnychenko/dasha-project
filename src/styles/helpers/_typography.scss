@@ -1,0 +1,86 @@
+.hero-title {
+  font-family: $base-font;
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: 400;
+  color: $primary-color;
+}
+
+.title {
+  font-family: $base-font;
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: 500;
+  color: $primary-color;
+}
+
+.block-title {
+  font-family: $base-font;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 400;
+  color: $primary-color;
+}
+
+.subtitle {
+  font-family: $secondary-font;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400;
+  color: $black;
+
+  &--dark {
+    color: $white;
+  }
+}
+
+.heading {
+  font-family: $secondary-font;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $black;
+
+  &--dark {
+    color: $white;
+  }
+}
+
+.body-text {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $black;
+
+  &--dark {
+    color: $white;
+  }
+}
+
+.link {
+  @extend .body-text;
+  border-bottom: 1px solid #368CBF;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: #368CBF;
+  }
+
+  &--unbordered {
+    border: none;
+  }
+
+  &--white {
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      color: #fff;
+      border-bottom: 1px solid #fff;
+    }
+  }
+}

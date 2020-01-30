@@ -1,0 +1,11 @@
+mixin header
+  header.header
+    .container
+      if block
+        block
+      else
+        a.logo(href="/")
+          span.logo__icon
+            svg(viewBox="0 0 32 34" class="icon")
+              use(xlink:href="img/sprites/sprite.svg#logo")
+          span.logo__text.subtitle.subtitle--dark EssaySampler

@@ -1,0 +1,21 @@
+.header {
+  background-color: $primary-color;
+
+  .container {
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .logo__icon {
+    display: block;
+    width: 32px;
+    height: 34px;
+    margin-right: 5px;
+  }
+}
