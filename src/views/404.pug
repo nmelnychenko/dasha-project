@@ -1,1 +1,20 @@
-h3 Page not found
+extends layouts/default
+include helpers/mixins
+include ../blocks/modules/header/header
+include ../blocks/modules/footer/footer
+
+block variables
+  - const title = "Essaysampler | 404 page"
+block styles
+  link(rel="stylesheet" href="styles/404.css")
+block content
+  +header
+  section.section.section--intro
+    .container
+      h1.page-title.hero-title OOPS!
+      p.page-subtitle.heading
+        | We can’t foung this page, something going wrong.
+      a.link(href="#") List of all Essay Samples
+      .decoration
+        img.decoration__image(src="img/404-bg.png" alt="page decoration picture")
+  +footer

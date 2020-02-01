@@ -1,6 +1,7 @@
 .footer {
   padding-top: 62px;
-  padding-bottom: 34px;
+  padding-bottom: 54px;
+  height: 136px;
   background: #368CBF;
 }
 
@@ -12,4 +13,8 @@
 .navigation-list {
   display: flex;
   justify-content: space-between;
+}
+
+.navigation-list__link {
+  font-weight: 700;
 }
