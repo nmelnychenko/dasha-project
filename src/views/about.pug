@@ -1,0 +1,19 @@
+extends layouts/default
+include helpers/mixins
+include ../blocks/modules/header/header
+include ../blocks/modules/footer/footer
+
+block variables
+  - const title = "Essaysampler | About Us"
+block styles
+  link(rel="stylesheet" href="styles/about-us.css")
+block content
+  +header
+  section.section.section--intro
+    .container
+      h1.page-title.title About Us
+      p.page-subtitle.subtitle
+        | We&nbsp;aggregate samples of&nbsp;academic essay for students to&nbsp;find here       inspiration fow own works. The variety of&nbsp;topics, samples of&nbsp;introduction, arguments, supportive facts, pros and cons, conclusions, citations and references are in&nbsp;your service.
+      .decoration
+        img.decoration__image(src="img/about-intro-decoration.png" alt="page decoration picture")
+  +footer

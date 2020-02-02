@@ -1,0 +1,31 @@
+.section--intro {
+  min-height: calc(100vh - 196px);
+  padding: 120px 0 80px;
+  overflow: hidden;
+
+  .container {
+    position: relative;
+  }
+
+  .decoration {
+    position: absolute;
+    top: -200px;
+    right: -245px;
+    width: 1334px;
+    height: 794px;
+  }
+}
+
+.page-title {
+  margin-bottom: 60px;
+}
+
+.page-subtitle {
+  width: 610px;
+}
+
+.decoration__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
