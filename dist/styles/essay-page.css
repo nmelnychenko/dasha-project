@@ -1,2 +1,130 @@
+body {
+  background: #D7E8F2;
+}
 
+.breadcrumbs {
+  margin: 21px 0 22px;
+}
+
+.breadcrumbs__list {
+  display: flex;
+  list-style: none;
+}
+
+.breadcrumbs__item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs__item + .breadcrumbs__item::before {
+  content: "\00a0/\00a0";
+  position: relative;
+}
+
+.breadcrumbs__link,
+.breadcrumbs__item {
+  font-size: 14px;
+  line-height: 17px;
+  color: #000;
+  text-decoration: none;
+  font-family: Montserrat, Gotham, Roboto, "Open Sans", sans-serif;
+}
+
+.breadcrumbs__link:hover {
+  color: #368CBF;
+}
+
+.section--intro {
+  padding-bottom: 138px;
+}
+
+.section--intro .section__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.section--intro .section__column:nth-child(1) {
+  width: calc(100% - 280px);
+}
+
+.section--intro .section__column:nth-child(2) {
+  width: 204px;
+}
+
+.section--intro .statistic {
+  display: block;
+}
+
+.section--intro .statistic__item {
+  display: block;
+  text-align: right;
+}
+
+.section--intro .statistic__item + .statistic__item {
+  margin-left: 18px;
+}
+
+.statistic__numbers {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.statistic__value {
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 700;
+}
+
+.statistic__desc,
+.statistic__pic-label {
+  margin-top: 8px;
+  font-weight: 400;
+  text-align: right;
+}
+
+.statistic__pic {
+  margin-left: auto;
+  width: 204px;
+  margin-top: 46px;
+}
+
+.eassay {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
+  padding: 36px 114px 82px 110px;
+}
+
+.category,
+.text-block__tag {
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  font-family: Montserrat, Gotham, Roboto, "Open Sans", sans-serif;
+  margin-bottom: 10px;
+}
+
+.text-block__tag {
+  margin-bottom: 5px;
+}
+
+.text-block__title {
+  margin-bottom: 10px;
+}
+
+.text-block__body {
+  line-height: 26px;
+}
+
+.text-block__body + .text-block__body {
+  margin-top: 16px;
+}
+
+.essay__title {
+  margin-bottom: 58px;
+}
+
+.essay__section + .essay__section {
+  margin-top: 30px;
+}
 /*# sourceMappingURL=maps/essay-page.css.map */

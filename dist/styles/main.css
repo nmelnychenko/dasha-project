@@ -477,7 +477,8 @@ h3,
 h4,
 h5,
 h6,
-ul {
+ul,
+p {
   margin: 0;
   padding: 0;
 }
@@ -535,9 +536,9 @@ img {
 }
 
 .footer {
-  padding-top: 62px;
-  padding-bottom: 54px;
-  height: 136px;
+  padding-top: 32px;
+  padding-bottom: 24px;
+  height: 76px;
   background: #368CBF;
 }
 
@@ -598,7 +599,7 @@ img {
 
 @media (min-width: 1440px) {
   .container--wide {
-    max-width: 1310px;
+    max-width: 1440px;
     padding: 0 65px;
   }
 }
