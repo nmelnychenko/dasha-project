@@ -336,6 +336,31 @@
   margin: 0 8px;
 }
 
+.section--popular-samples .slider .slick-prev,
+.section--popular-samples .slider .slick-next {
+  width: 55px;
+  background-image: url("../img/arrow.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section--popular-samples .slider .slick-prev::before,
+.section--popular-samples .slider .slick-next::before {
+  content: none;
+}
+
+.section--popular-samples .slider .slick-prev {
+  top: -10px;
+  left: 6px;
+}
+
+.section--popular-samples .slider .slick-next {
+  top: -20px;
+  right: 6px;
+  transform: rotate(180deg);
+}
+
 .section--popular-samples .slider__item {
   width: auto !important;
   padding: 30px 32px 50px 28px;
