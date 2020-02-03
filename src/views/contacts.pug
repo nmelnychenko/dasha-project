@@ -6,7 +6,7 @@ include ../blocks/modules/footer/footer
 block variables
   - const title = "Essaysampler | Contact Us"
 block styles
-  link(rel="stylesheet" href="styles/404.css")
+  link(rel="stylesheet" href="styles/contacts.css")
 block content
   +header
   section.section.section--intro
@@ -15,15 +15,15 @@ block content
       p.page-subtitle.body-text
         | Please, leave your message here and we will write you back!
       form.form
-        label.form__field
+        label.form__field.body-text
           | Your message
           textarea.form__textarea(required)
-        label.form__field
+        label.form__field.body-text
           | Your email
           input.form__input(type="text" required)
         button.form__submit(type="submit") send
       .decoration
-        img.decoration__image(src="img/404-bg.png" alt="page decoration picture")
+        img.decoration__image(src="img/contact-us-decoration.png" alt="page decoration picture")
       .thank-you-modal
         h2.tahnk-you-modal__title Thank you!
         p.thank-you-modal__body Lorem ipsum
