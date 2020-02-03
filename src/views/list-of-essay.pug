@@ -1,0 +1,192 @@
+extends layouts/default
+include helpers/mixins
+include ../blocks/modules/header/header
+include ../blocks/modules/footer/footer
+
+block variables
+  - const title = "Essaysampler | 404 page"
+block styles
+  link(rel="stylesheet" href="styles/list-of-essay.css")
+block content
+  +header
+  section.section.section--intro
+    .container
+      .decoration
+          img.decoration__image(src="img/list-of-essay-decoration.png" alt="page decoration picture")
+      h1.page-title.title List of Essay Samples
+      ul.essay-list
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | How obtaining a&nbsp;Doctor of&nbsp;Nursing Practice (DNP) degree in&nbsp;leadership will align with your current or&nbsp;future role as&nbsp;a&nbsp;nurse leader and the mission of&nbsp;TUN?
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | Goodfellas
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | Interview a person with a mental health disorder
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | Reflection on&nbsp;Stuart Hall, &laquo;Cultural Identity and Diaspora.&raquo; Identity: Community, Culture, Difference
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | Examine the theory of&nbsp;change from the bottom&nbsp;up
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | Which organizational theories are best suited to&nbsp;policing
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | Opportunity for college a&nbsp;career internship
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | Scientific Inquiry Using WildCam Gorongosa
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | Humanities Through the Arts
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | Interorganizational Relationships
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | How does motivation effect leadership?
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | The knowledge, skills, and/or abilities you possess that will enable you to&nbsp;successfully earn the DNP degree
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | Why negotiation skill is&nbsp;so&nbsp;important in&nbsp;leadership
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | How successful collaboration can improve success and provide competitive advantages
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | Islamic Belief and Practice
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | What are the three ways the government can help solve the obesity problem in&nbsp;America?
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | Human-animal relations in&nbsp;three cultures
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | Use of light in photography
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | A&nbsp;case study of&nbsp;corporate governance failure
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | Karl Marx&rsquo;s contribution to&nbsp;sociological theory
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | Designing Organizations for the International Environment
+        li.essay-list__item
+          a.essay-list__link(href="#")
+            span.essay-list__icon
+              svg(width="20" height="20")
+                use(xlink:href="img/sprites/sprite.svg#pencil")
+            span.essay-list__body.body-text
+              | Origins of Sociology
+      ul.pagination
+        li.pagination__item.pagination__item--prev
+          a.pagination__link.link(href="#")
+            svg(width='22' height='8' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M.646446 3.64645c-.195261.19526-.195261.51184 0 .7071L3.82843 7.53553c.19526.19527.51184.19527.7071 0 .19527-.19526.19527-.51184 0-.7071L1.70711 4l2.82842-2.82843c.19527-.195259.19527-.511842 0-.707104-.19526-.195262-.51184-.195262-.7071 0L.646446 3.64645zM22 3.5H1v1h21v-1z' fill='#368CBF')
+        li.pagination__item.heading
+          a.pagination__link.link(href="#")
+            | 1
+        li.pagination__item.heading
+          a.pagination__link.link(href="#")
+            | 2
+        li.pagination__item.heading
+          a.pagination__link.link(href="#")
+            | 3
+        li.pagination__item.pagination__item--dots.heading
+          | ...
+        li.pagination__item.pagination__item--next
+          a.pagination__link(href="#")
+            svg(width='22' height='8' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M.646446 3.64645c-.195261.19526-.195261.51184 0 .7071L3.82843 7.53553c.19526.19527.51184.19527.7071 0 .19527-.19526.19527-.51184 0-.7071L1.70711 4l2.82842-2.82843c.19527-.195259.19527-.511842 0-.707104-.19526-.195262-.51184-.195262-.7071 0L.646446 3.64645zM22 3.5H1v1h21v-1z' fill='#368CBF')
+  +footer
