@@ -46,8 +46,11 @@
         </form>
         <div class="decoration"><img class="decoration__image" src="img/contact-us-decoration.png" alt="page decoration picture"></div>
         <div class="thank-you-modal">
-          <h2 class="tahnk-you-modal__title">Thank you!</h2>
-          <p class="thank-you-modal__body">Lorem ipsum</p>
+          <div class="thank-you-modal__underlay"></div>
+          <div class="thank-you-modal__inner">
+            <h2 class="tahnk-you-modal__title">Thank you!</h2>
+            <p class="thank-you-modal__body">Lorem ipsum</p>
+          </div>
         </div>
       </div>
     </section>
@@ -63,5 +66,12 @@
         </nav>
       </div>
     </footer>
+    <script>
+      const modalOuter = document.querySelector(".thank-you-modal__underlay");
+      
+      modalOuter.addEventListener("click", function(e) {
+        document.querySelector(".thank-you-modal").classList.remove("is-active");
+      })
+    </script>
   </body>
 </html>

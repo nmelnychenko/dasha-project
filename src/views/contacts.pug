@@ -25,6 +25,16 @@ block content
       .decoration
         img.decoration__image(src="img/contact-us-decoration.png" alt="page decoration picture")
       .thank-you-modal
-        h2.tahnk-you-modal__title Thank you!
-        p.thank-you-modal__body Lorem ipsum
+        .thank-you-modal__underlay
+        .thank-you-modal__inner
+          h2.tahnk-you-modal__title Thank you!
+          p.thank-you-modal__body Lorem ipsum
   +footer
+
+block scripts
+  script.
+    const modalOuter = document.querySelector(".thank-you-modal__underlay");
+
+    modalOuter.addEventListener("click", function(e) {
+      document.querySelector(".thank-you-modal").classList.remove("is-active");
+    })

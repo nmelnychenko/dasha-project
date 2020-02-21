@@ -226,11 +226,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-jquery__WEBPACK_IMPORTED_MODULE_2___default()(".slider").slick({
-  infinite: true,
-  slidesToShow: 4,
-  slidesToScroll: 1
-});
+
+if (jquery__WEBPACK_IMPORTED_MODULE_2___default()(".slider").length) {
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()(".slider").slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1
+  });
+}
 
 /***/ })
 
