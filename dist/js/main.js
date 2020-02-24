@@ -230,8 +230,29 @@ __webpack_require__.r(__webpack_exports__);
 if (jquery__WEBPACK_IMPORTED_MODULE_2___default()(".slider").length) {
   jquery__WEBPACK_IMPORTED_MODULE_2___default()(".slider").slick({
     infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1
+    mobileFirst: true,
+    slidesToScroll: 1,
+    responsive: [{
+      breakpoint: 320,
+      settings: {
+        slidesToShow: 1
+      }
+    }, {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2
+      }
+    }, {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 4
+      }
+    }]
   });
 }
 

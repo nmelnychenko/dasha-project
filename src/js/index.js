@@ -6,7 +6,33 @@ import "slick-carousel";
 if ($(".slider").length) {
   $(".slider").slick({
     infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 1
+    mobileFirst: true,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+        }
+      }
+    ]
   });
 }

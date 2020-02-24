@@ -538,7 +538,6 @@ img {
 .footer {
   padding-top: 32px;
   padding-bottom: 24px;
-  height: 76px;
   background: #368CBF;
 }
 
@@ -547,12 +546,9 @@ img {
   margin: 0 auto;
 }
 
-.navigation-list {
-  display: flex;
-  justify-content: space-between;
-}
-
 .navigation-list__link {
+  display: inline-block;
+  padding: 8px 0;
   font-weight: 700;
 }
 
@@ -587,6 +583,17 @@ img {
   color: #368CBF;
   font-family: Solway, Roboto Slab, Roboto, "Open Sans", sans-serif;
   font-weight: 800;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    height: 76px;
+  }
+
+  .navigation-list {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 @media (min-width: 1200px) {

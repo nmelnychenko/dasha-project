@@ -1,8 +1,11 @@
 .footer {
   padding-top: 32px;
   padding-bottom: 24px;
-  height: 76px;
   background: #368CBF;
+
+  @media (min-width: 768px) {
+    height: 76px;
+  }
 }
 
 .footer__nav {
@@ -11,10 +14,14 @@
 }
 
 .navigation-list {
-  display: flex;
-  justify-content: space-between;
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .navigation-list__link {
+  display: inline-block;
+  padding: 8px 0;
   font-weight: 700;
 }

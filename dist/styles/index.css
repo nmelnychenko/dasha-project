@@ -304,15 +304,10 @@
 
 .section--intro .page-title {
   margin-bottom: 90px;
-  max-width: 648px;
 }
 
 .section--intro .section__illustration {
-  position: absolute;
-  right: -80px;
-  top: -50px;
-  width: 744px;
-  height: 415px;
+  display: none;
 }
 
 .section--popular-samples {
@@ -388,20 +383,13 @@
 }
 
 .section--paper-types .section__illustration {
-  position: absolute;
-  right: -80px;
-  top: -10px;
-  width: 330px;
-  height: 306px;
-  transform: rotate(-10deg);
+  display: none;
 }
 
 .papers-list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 280px;
-  width: 800px;
 }
 
 .papers-list__item {
@@ -431,14 +419,17 @@
 
 .subjects-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .subjects-list__item {
+  position: relative;
+  flex-basis: 220px;
   width: 220px;
-  height: 300px;
   background: #FFFFFF;
   box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
+  margin-bottom: 16px;
 }
 
 .section--topics {
@@ -452,11 +443,7 @@
 }
 
 .section--topics .section__illustration {
-  position: absolute;
-  top: 0;
-  right: -100px;
-  width: 312px;
-  height: 166px;
+  display: none;
 }
 
 .subject-card {
@@ -483,7 +470,7 @@
 .subject-card__icon {
   position: absolute;
   top: 35px;
-  right: 35px;
+  right: 18px;
   width: 46px;
   height: 46px;
   background-size: contain;
@@ -496,13 +483,11 @@
 }
 
 .topics-list {
-  column-count: 2;
-  margin: 0 -40px 16px;
+  margin-bottom: 16px;
 }
 
 .topics-list__item {
-  width: 476px;
-  margin: 0 40px 20px;
+  margin-bottom: 20px;
 }
 
 .topics-list__link {
@@ -511,8 +496,142 @@
 }
 
 .topics-list__icon {
+  flex-shrink: 0;
   width: 20px;
   height: 20px;
   margin-right: 36px;
+}
+
+@media (min-width: 480px) {
+  .section--intro .section__illustration {
+    display: block;
+    width: 370px;
+    position: absolute;
+    right: -60px;
+    bottom: -47px;
+  }
+
+  .subjects-list__item {
+    flex-basis: 50%;
+    max-width: 50%;
+    height: 270px;
+    box-shadow: none;
+    margin-bottom: 0;
+  }
+
+  .subjects-list__item:nth-child(-n + 2)::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    right: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+
+  .subjects-list__item:nth-child(2n + 2)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 5px;
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media (min-width: 768px) {
+  .section--intro .page-title {
+    max-width: 480px;
+  }
+
+  .section--intro .section__illustration {
+    right: -150px;
+    bottom: auto;
+    top: 0;
+    width: 744px;
+    height: 415px;
+  }
+
+  .section--paper-types .section__illustration {
+    display: block;
+    position: absolute;
+    right: -80px;
+    top: -10px;
+    width: 330px;
+    height: 306px;
+    transform: rotate(-10deg);
+  }
+
+  .papers-list {
+    max-width: 440px;
+    height: 440px;
+  }
+
+  .section--topics .section__illustration {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+  }
+
+  .topics-list {
+    column-count: 2;
+    margin: 0 -40px 16px;
+  }
+
+  .topics-list__item {
+    max-width: 476px;
+    margin: 0 40px 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .section--intro .page-title {
+    max-width: 648px;
+  }
+
+  .papers-list {
+    height: 280px;
+    max-width: 800px;
+  }
+
+  .subjects-list {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .subjects-list__item {
+    width: 220px;
+    flex-basis: 220px;
+    height: 300px;
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
+  }
+
+  .subjects-list__item:nth-child(-n + 2)::before,
+  .subjects-list__item:nth-child(2n + 2)::after {
+    content: none;
+  }
+
+  .section--topics .section__illustration {
+    right: 0;
+    top: -10px;
+    width: 280px;
+  }
+
+  .subject-card__icon {
+    right: 35px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section--intro .section__illustration {
+    right: -80px;
+    top: -50px;
+  }
+
+  .section--topics .section__illustration {
+    width: 312px;
+    right: -100px;
+  }
 }
 /*# sourceMappingURL=maps/index.css.map */
