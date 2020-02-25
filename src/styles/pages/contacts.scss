@@ -1,25 +1,35 @@
 @import "../helpers/_variables.scss";
 
-.header {
+.header,
+.footer {
   position: relative;
   z-index: 10;
 }
 
 .section--intro {
-  min-height: calc(100vh - 136px);
+  min-height: calc(100vh - 264px);
   padding: 54px 0 80px;
   overflow: hidden;
+
+  @media(min-width: 768px) {
+    min-height: calc(100vh - 136px);
+  }
 
   .container {
     position: relative;
   }
 
   .decoration {
-    position: absolute;
-    width: 1329px;
-    height: 851px;
-    right: -364px;
-    top: -122px;
+    display: none;
+
+    @media(min-width: 992px) {
+      display: block;
+      position: absolute;
+      width: 1329px;
+      height: 851px;
+      right: -364px;
+      top: -122px;
+    }
   }
 }
 
@@ -32,6 +42,7 @@
 }
 
 .form {
+  max-width: 100%;
   width: 635px;
 }
 
@@ -120,12 +131,17 @@
     top: 50%;
     left: 50%;
     width: 635px;
+    max-width: 90%;
     height: 290px;
-    padding: 60px 70px;
+    padding: 32px 24px;
     transform: translate(-50%, -50%);
     background: #FFFFFF;
     box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
+
+    @media(min-width: 992px) {
+      padding: 60px 70px;
+    }
   }
 
   &__title {

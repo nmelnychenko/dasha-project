@@ -1,6 +1,6 @@
 .section--intro {
   min-height: calc(100vh - 136px);
-  padding: 60px 0 195px;
+  padding: 40px 0 80px;
   overflow: hidden;
 }
 
@@ -9,11 +9,7 @@
 }
 
 .section--intro .decoration {
-  position: absolute;
-  top: -60px;
-  right: -79px;
-  width: 518px;
-  height: 1312px;
+  display: none;
 }
 
 .page-title {
@@ -51,6 +47,7 @@
 }
 
 .essay-list__icon {
+  flex-shrink: 0;
   width: 16px;
   height: 17px;
   margin-right: 38px;
@@ -100,5 +97,20 @@
 
 .pagination__item--next {
   transform: rotate(180deg);
+}
+
+@media (min-width: 992px) {
+  .section--intro {
+    padding: 60px 0 195px;
+  }
+
+  .section--intro .decoration {
+    display: block;
+    position: absolute;
+    top: -60px;
+    right: -79px;
+    width: 518px;
+    height: 1312px;
+  }
 }
 /*# sourceMappingURL=maps/list-of-essay.css.map */
