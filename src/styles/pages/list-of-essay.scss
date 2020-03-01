@@ -65,7 +65,12 @@
   flex-shrink: 0;
   width: 16px;
   height: 17px;
-  margin-right: 38px;
+  margin-top: 1px;
+  margin-right: 18px;
+
+  @media(min-width: 768px) {
+    margin-right: 38px;
+  }
 
   svg {
     display: block;

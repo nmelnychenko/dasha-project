@@ -50,7 +50,8 @@
   flex-shrink: 0;
   width: 16px;
   height: 17px;
-  margin-right: 38px;
+  margin-top: 1px;
+  margin-right: 18px;
 }
 
 .essay-list__icon svg {
@@ -97,6 +98,12 @@
 
 .pagination__item--next {
   transform: rotate(180deg);
+}
+
+@media (min-width: 768px) {
+  .essay-list__icon {
+    margin-right: 38px;
+  }
 }
 
 @media (min-width: 992px) {

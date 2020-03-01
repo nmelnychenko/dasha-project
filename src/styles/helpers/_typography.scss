@@ -1,9 +1,14 @@
 .hero-title {
   font-family: $base-font;
-  font-size: 60px;
-  line-height: 70px;
+  font-size: 36px;
+  line-height: 48px;
   font-weight: 400;
   color: $primary-color;
+
+  @media(min-width: 768px) {
+    font-size: 60px;
+    line-height: 70px;
+  }
 }
 
 .title {
@@ -29,10 +34,15 @@
 
 .subtitle {
   font-family: $secondary-font;
-  font-size: 24px;
-  line-height: 29px;
+  font-size: 20px;
+  line-height: 26px;
   font-weight: 400;
   color: $black;
+
+  @media(min-width: 768px) {
+    font-size: 24px;
+    line-height: 29px;
+  }
 
   &--dark {
     color: $white;

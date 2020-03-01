@@ -142,6 +142,12 @@
   color: #000;
 }
 
+@media (min-width: 600px) {
+  .section--intro .container {
+    padding: 0 56px;
+  }
+}
+
 @media (min-width: 768px) {
   .section--intro {
     min-height: calc(100vh - 136px);
@@ -160,6 +166,12 @@
 
   .thank-you-modal__inner {
     padding: 60px 70px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section--intro .container {
+    padding: 0 36px;
   }
 }
 /*# sourceMappingURL=maps/contacts.css.map */
