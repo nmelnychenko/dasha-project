@@ -207,4 +207,14 @@ body {
     padding: 36px 114px 82px 110px;
   }
 }
+
+@media (min-width: 1200px) {
+  .section--intro .section__column:nth-child(1) {
+    width: calc(100% - 276px);
+  }
+
+  .statistic__pic {
+    width: 194px;
+  }
+}
 /*# sourceMappingURL=maps/essay-page.css.map */

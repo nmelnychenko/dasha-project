@@ -81,6 +81,12 @@ body {
         width: 204px;
       }
     }
+
+    @media(min-width: 1200px) {
+      &:nth-child(1) {
+        width: calc(100% - 276px);
+      }
+    }
   }
 
   .statistic {
@@ -156,6 +162,10 @@ body {
 
   @media(min-width: 768px) {
     margin-top: 46px;
+  }
+
+  @media(min-width: 1200px) {
+    width: 194px;
   }
 }
 
