@@ -101,10 +101,26 @@
   }
 
   .slider__item {
-    width: auto !important;
+    min-height: 352px;
+    max-height: 352px;
     padding: 30px 32px 50px 28px;
     background: #fff;
     box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
+
+    @media (min-width: 768px) {
+      min-height: 240px;
+      max-height: 240px;
+    }
+
+    @media (min-width: 992px) {
+      min-height: 416px;
+      max-height: 416px;
+    }
+
+    @media (min-width: 1200px) {
+      min-height: 340px;
+      max-height: 340px;
+    }
   }
 }
 

@@ -357,7 +357,8 @@
 }
 
 .section--popular-samples .slider__item {
-  width: auto !important;
+  min-height: 352px;
+  max-height: 352px;
   padding: 30px 32px 50px 28px;
   background: #fff;
   box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
@@ -551,6 +552,11 @@
     height: 415px;
   }
 
+  .section--popular-samples .slider__item {
+    min-height: 240px;
+    max-height: 240px;
+  }
+
   .section--paper-types .section__illustration {
     display: block;
     position: absolute;
@@ -590,6 +596,11 @@
     max-width: 648px;
   }
 
+  .section--popular-samples .slider__item {
+    min-height: 416px;
+    max-height: 416px;
+  }
+
   .papers-list {
     height: 280px;
     max-width: 800px;
@@ -627,6 +638,11 @@
   .section--intro .section__illustration {
     right: -80px;
     top: -50px;
+  }
+
+  .section--popular-samples .slider__item {
+    min-height: 340px;
+    max-height: 340px;
   }
 
   .section--topics .section__illustration {
