@@ -503,6 +503,25 @@
   margin-right: 36px;
 }
 
+.section--instructions {
+  padding-top: 35px;
+  padding-bottom: 58px;
+  background: #D7E8F2;
+}
+
+.how-to-article__list {
+  padding-left: 48px;
+  margin: 24px 0 40px;
+}
+
+.how-to-article__list-item {
+  margin-bottom: 16px;
+}
+
+.how-to-article__list-item:last-child {
+  margin-bottom: 0;
+}
+
 @media (min-width: 480px) {
   .section--intro .section__illustration {
     display: block;
