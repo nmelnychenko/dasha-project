@@ -40,7 +40,7 @@ body {
 
 .section--intro {
   @media(min-width: 768px) {
-    padding-bottom: 138px;
+    padding-bottom: 60px;
   }
 
   .section__row {
@@ -205,6 +205,11 @@ body {
   margin-bottom: 10px;
 }
 
+a.text-block__title {
+  color: $primary-color;
+  text-decoration: none;
+}
+
 .text-block__body {
   line-height: 26px;
 
@@ -221,4 +226,72 @@ body {
   & + & {
     margin-top: 30px;
   }
+}
+
+.section--related-samples {
+  padding-top: 30px;
+  padding-bottom: 50px;
+
+  .container {
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+.related-samples-title {
+  display: inline-block;
+  position: relative;
+  padding: 0 70px;
+  margin-bottom: 24px;
+  background-color: #D7E8F2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 2px;
+    width: 100vw;
+    background-color: $primary-color;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+}
+
+.essay-card-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+}
+
+.essay-card-list__item {
+  width: 256px;
+  height: 362px;
+  margin: 0 8px 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.essay-card {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  padding: 30px 32px 50px 28px;
+  background: #fff;
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    transform: translate(-5px, -5px);
+  }
+}
+
+.essay-card__title {
+  margin-bottom: 6px;
+  font-family: $base-font;
 }

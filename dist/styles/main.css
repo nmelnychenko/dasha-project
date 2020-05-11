@@ -507,6 +507,10 @@ img {
   padding: 0 20px;
 }
 
+.container--fluid {
+  max-width: 100%;
+}
+
 .header {
   background-color: #368CBF;
 }
