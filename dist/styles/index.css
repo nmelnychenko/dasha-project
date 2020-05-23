@@ -509,6 +509,15 @@
   background: #D7E8F2;
 }
 
+.how-to-article {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.how-to-article__title {
+  font-weight: 400;
+}
+
 .how-to-article__list {
   padding-left: 48px;
   margin: 24px 0 40px;

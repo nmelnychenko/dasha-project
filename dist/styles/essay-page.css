@@ -106,8 +106,12 @@ body {
 }
 
 a.text-block__title {
-  color: #368CBF;
+  color: #000000;
   text-decoration: none;
+}
+
+a.text-block__title:hover {
+  color: #368CBF;
 }
 
 .text-block__body {
@@ -119,6 +123,14 @@ a.text-block__title {
 }
 
 .essay__title {
+  margin-bottom: 12px;
+}
+
+.essay__title + .essay__section {
+  margin-top: 58px;
+}
+
+.essay__disclaimer {
   margin-bottom: 58px;
 }
 
@@ -177,7 +189,7 @@ a.text-block__title {
   display: block;
   height: 100%;
   text-decoration: none;
-  padding: 30px 32px 50px 28px;
+  padding: 30px 32px 36px 28px;
   background: #fff;
   box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
   text-align: left;
@@ -187,6 +199,11 @@ a.text-block__title {
 .essay-card:hover,
 .essay-card:focus {
   transform: translate(-5px, -5px);
+}
+
+.essay-card__inner {
+  height: 100%;
+  overflow: hidden;
 }
 
 .essay-card__title {
@@ -288,6 +305,30 @@ a.text-block__title {
 
   .statistic__pic {
     width: 194px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .essay-card-list__item:nth-child(5) {
+    display: none;
+  }
+}
+
+@media (max-width: 1120px) {
+  .essay-card-list__item:nth-child(4) {
+    display: none;
+  }
+}
+
+@media (max-width: 840px) {
+  .essay-card-list__item:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 569px) {
+  .essay-card-list__item:nth-child(2) {
+    display: none;
   }
 }
 /*# sourceMappingURL=maps/essay-page.css.map */
