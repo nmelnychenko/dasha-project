@@ -375,8 +375,11 @@
 }
 
 .how-to-article {
-  width: 500px;
-  margin: 0 auto;
+  max-width: 640px;
+
+  @media (min-width: 640px) {
+    padding-left: 120px;
+  }
 }
 
 .how-to-article__title {
@@ -393,5 +396,51 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+.how-to-article__link {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.section--topic-ideas {
+  padding-top: 35px;
+  padding-bottom: 68px;
+}
+
+.topics-group-list {
+  margin-bottom: 32px;
+
+  @media (min-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.topics-group-list__item {
+  margin: 16px 0;
+
+  @media (min-width: 480px) {
+    margin: 16px;
+    flex-basis: calc(50% - 32px);
+    max-width: calc(50% - 32px);
+  }
+}
+
+.topics-group__title {
+  margin-bottom: 12px;
+}
+
+.topics-ideas-list__item {
+  list-style: "➢";
+  padding-left: 8px;
+  margin-left: 16px;
+
+  & + & {
+    margin-top: 6px;
   }
 }

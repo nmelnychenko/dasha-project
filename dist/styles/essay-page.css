@@ -132,6 +132,9 @@ a.text-block__title:hover {
 
 .essay__disclaimer {
   margin-bottom: 58px;
+  font-style: italic;
+  line-height: 1.4;
+  color: #4d4d4d;
 }
 
 .essay__section + .essay__section {
@@ -189,7 +192,7 @@ a.text-block__title:hover {
   display: block;
   height: 100%;
   text-decoration: none;
-  padding: 30px 32px 36px 28px;
+  padding: 30px 32px 42px 28px;
   background: #fff;
   box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
   text-align: left;
@@ -207,7 +210,7 @@ a.text-block__title:hover {
 }
 
 .essay-card__title {
-  margin-bottom: 6px;
+  margin-bottom: 16px;
   font-family: Solway, Roboto Slab, Roboto, "Open Sans", sans-serif;
 }
 
@@ -320,14 +323,8 @@ a.text-block__title:hover {
   }
 }
 
-@media (max-width: 840px) {
+@media (min-width: 570px) and (max-width: 840px) {
   .essay-card-list__item:nth-child(3) {
-    display: none;
-  }
-}
-
-@media (max-width: 569px) {
-  .essay-card-list__item:nth-child(2) {
     display: none;
   }
 }

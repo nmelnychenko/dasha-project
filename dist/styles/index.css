@@ -510,8 +510,7 @@
 }
 
 .how-to-article {
-  width: 500px;
-  margin: 0 auto;
+  max-width: 640px;
 }
 
 .how-to-article__title {
@@ -529,6 +528,41 @@
 
 .how-to-article__list-item:last-child {
   margin-bottom: 0;
+}
+
+.how-to-article__link {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.section--topic-ideas {
+  padding-top: 35px;
+  padding-bottom: 68px;
+}
+
+.topics-group-list {
+  margin-bottom: 32px;
+}
+
+.topics-group-list__item {
+  margin: 16px 0;
+}
+
+.topics-group__title {
+  margin-bottom: 12px;
+}
+
+.topics-ideas-list__item {
+  list-style: "➢";
+  padding-left: 8px;
+  margin-left: 16px;
+}
+
+.topics-ideas-list__item + .topics-ideas-list__item {
+  margin-top: 6px;
 }
 
 @media (min-width: 480px) {
@@ -564,6 +598,23 @@
     top: 5px;
     bottom: 5px;
     border-left: 1px solid rgba(0, 0, 0, 0.15);
+  }
+
+  .topics-group-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .topics-group-list__item {
+    margin: 16px;
+    flex-basis: calc(50% - 32px);
+    max-width: calc(50% - 32px);
+  }
+}
+
+@media (min-width: 640px) {
+  .how-to-article {
+    padding-left: 120px;
   }
 }
 
