@@ -1,0 +1,86 @@
+extends layouts/default
+include helpers/mixins
+include ../blocks/modules/header/header
+include ../blocks/modules/footer/footer
+
+block variables
+  -
+    const title = "Essaysampler | Essay topics ideas";
+    const topicsList = [
+      {
+        title: "Business & Marketing",
+        list: ["Advertising", "Business", "Business Administration", "Economics", "Entrepreneurship",
+          "Internet Marketing", "Marketing", "Public Relations", "Business Law", "International relations", "Tourism",
+          "Real Estate", "World affairs"
+        ]
+      },
+      {
+        title: "Management",
+        list: ["Entertainment Management", "Hospitality Management", "Human Resources Management", "Leadership",
+          "Logistics", "Management", "Negotiation & Conflict Management", "Non-Profit Management", "Project Management",
+          "Retail & Sales Management", "Risk Management", "Sports Management", "Supply Chain Management"
+        ]
+      },
+      {
+        title: "Accounting & Finance",
+        list: ["Accounting", "Auditing", "Finance", "Forensic Accounting", "Investments", "Taxation"]
+      },
+      {
+        title: "Computers & Technology",
+        list: ["Computer Science", "Programming", "Information Systems Security", "Information Technology", "Network Security"]
+      },
+      {
+        title: "Criminal Justice & Legal",
+        list: ["Criminal Justice", "Criminal Law", "Criminology", "Cyber Security", "Homeland Security", "Law"]
+      },
+      {
+        title: "Nursing & Healthcare",
+        list: ["Health Care", "Medicine", "Nursing", "Nutrition", "Pharmacology", "Emergency Management", "Health Education",
+          "Health Services", "Healthcare Administration", "Healthcare Management", "Public Health"]
+      },
+      {
+        title: "Liberal Arts & Humanities",
+        list: ["Anthropology", "Archeology", "Classic English literature", "Communications", "Culture and Ethnic Studies",
+          "Education", "English", "History", "Human & Family Development", "Journalism", "Linguistics", "Literature",
+          "Logic", "Military Studies", "Philosophy", "Political science", "Psychology", "Public Administration",
+          "Public Policy", "Religious studies", "Shakespeare studies", "Social Work", "Sociology", "Sports",
+          "Women and gender studies", "World literature"]
+      },
+      {
+        title: "Art",
+        list: ["Architecture", "Art", "Design", "Fashion", "Theater studies", "Film studies", "Music", "Photography", "Poetry"]
+      },
+      {
+        title: "Natural science",
+        list: ["Astronomy", "Biochemistry", "Biology", "Chemistry", "Ecology", "Environmental studies", "Genetics",
+          "Geography", "Geology", "Physics"]
+      },
+      {
+        title: "Science & Engineering",
+        list: ["Aviation", "Construction", "Engineering", "Technology"]
+      }
+    ];
+
+block styles
+  link(rel="stylesheet" href="styles/essay-topics-ideas.css")
+
+block content
+  +header
+  section.section.section--topics-ideas
+    .container
+      h1.page-title.title Essay Topic Ideas by Subject
+      ul.topics-ideas-list
+        each item in topicsList
+          -
+            const title = item.title
+            const innerList = item.list
+
+          li.topics-group
+            h2.heading.topics-group__title!= title
+            ul.topics-group__list
+
+              each element in innerList
+                li.topics-group__list-item
+                  a.link.topics-group__link(href="#")!= element
+
+  +footer

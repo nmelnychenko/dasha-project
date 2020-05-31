@@ -1,0 +1,39 @@
+.section--topics-ideas {
+  padding: 40px 0;
+
+  @media (min-width: 768px) {
+    padding: 60px 0;
+  }
+}
+
+.page-title {
+  margin-bottom: 24px;
+}
+
+.topics-ideas-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: 640px) {
+    height: 2020px;
+  }
+
+  @media (min-width: 992px) {
+    height: 1520px;
+  }
+}
+
+.topics-group__title {
+  margin-bottom: 16px;
+}
+
+.topics-group__list-item {
+  & + & {
+    margin-top: 12px;
+  }
+}
+
+.topics-group {
+  margin-bottom: 20px;
+}
