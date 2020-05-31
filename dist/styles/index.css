@@ -509,10 +509,6 @@
   background: #D7E8F2;
 }
 
-.how-to-article {
-  max-width: 640px;
-}
-
 .how-to-article__title {
   font-weight: 400;
 }
@@ -575,7 +571,7 @@
   top: 0;
   left: -16px;
   font-size: 32px;
-  color: #368CBF;
+  color: #74b3d8;
 }
 
 .topics-ideas-list__item + .topics-ideas-list__item {

@@ -375,8 +375,6 @@
 }
 
 .how-to-article {
-  max-width: 640px;
-
   @media (min-width: 640px) {
     padding-left: 120px;
   }
@@ -459,7 +457,7 @@
     top: 0;
     left: -16px;
     font-size: 32px;
-    color: $primary-color;
+    color: #74b3d8;
   }
 
   & + & {
