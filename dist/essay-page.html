@@ -23,8 +23,8 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png"><link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Solway:400,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/essay-page.css">
+    <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="styles/essay-page.min.css">
   </head>
   <body>
     <header class="header">
@@ -54,7 +54,8 @@
                 responsible for any negative consequences arising from the use of information posted on this site.
               </p>
               <section class="essay__section text-block__tag">
-                <div class="text-block__tag">Free ideas for</div><a class="text-block__title heading" href="#" target="_blank">Introduction to&nbsp;Leadership and Negotiation Skills Essay Sample</a>
+                <div class="text-block__tag">Free ideas for</div>
+                <button class="text-block__title heading js-modal-trigger" data-href="link-to-order-here">Introduction to&nbsp;Leadership and Negotiation Skills Essay Sample</button>
                 <p class="text-block__body body-text">
                   Having superior negotiation skills is&nbsp;conductive to&nbsp;the success in&nbsp;personal
                   life and career development. This essay will indicate that my&nbsp;natural preferences for different
@@ -63,7 +64,8 @@
                 </p>
               </section>
               <section class="essay__section text-block">
-                <div class="text-block__tag">Free ideas for</div><a class="text-block__title heading" href="#" target="_blank">Pros and cons to&nbsp;Real Leaders Negotiate Essay Sample</a>
+                <div class="text-block__tag">Free ideas for</div>
+                <button class="text-block__title heading js-modal-trigger" data-href="link-to-order-here">Pros and cons to&nbsp;Real Leaders Negotiate Essay Sample</button>
                 <p class="text-block__body body-text">
                   Mediation. Typically mediators are neutral third parties who help conflicting parties reach a&nbsp;
                   voluntary agreement. The goal of&nbsp;mediation is&nbsp;to&nbsp;build consensus around a&nbsp;
@@ -211,5 +213,36 @@
         </nav>
       </div>
     </footer>
+    <div class="modal js-modal">
+      <div class="modal__backdrop js-modal-close"></div>
+      <div class="modal__body">
+        <div class="modal__title">Do you want a unique essay on this topic written or you</div>
+        <div class="modal__actions"><a class="modal__action modal__action--primary js-order-link" href="#">Order now</a>
+          <button class="modal__action modal__action--secondary js-modal-close">No, thanks</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      const modalTrigers = document.querySelectorAll(".min.js-modal-trigger");
+      const modal = document.querySelector(".min.js-modal");
+      const modalCloseTriggers = document.querySelectorAll(".min.js-modal-close");
+      const orderLink = document.querySelector(".min.js-order-link");
+      
+      Array.prototype.slice.call(modalTrigers).forEach(function(element) {
+        element.addEventListener("click", function(e) {
+          const target = e.target;
+          const href = target.getAttribute("data-href");
+      
+          modal.classList.add("is-visible");
+          orderLink.setAttribute("href", href);
+        });
+      })
+      
+      Array.prototype.slice.call(modalCloseTriggers).forEach(function(element) {
+        element.addEventListener("click", function(e) {
+          modal.classList.remove("is-visible");
+        });
+      });
+    </script>
   </body>
 </html>

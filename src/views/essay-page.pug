@@ -35,7 +35,7 @@ block content
               | responsible for any negative consequences arising from the use of information posted on this site.
             section.essay__section.text-block__tag
               .text-block__tag Free ideas for
-              a(href="#" target="_blank").text-block__title.heading
+              button.text-block__title.heading.js-modal-trigger(data-href="link-to-order-here")
                 | Introduction to&nbsp;Leadership and Negotiation Skills Essay Sample
               p.text-block__body.body-text
                 | Having superior negotiation skills is&nbsp;conductive to&nbsp;the success in&nbsp;personal
@@ -44,7 +44,7 @@ block content
                 | improve negotiation skills based on&nbsp;the role-play activity.
             section.essay__section.text-block
               .text-block__tag Free ideas for
-              a(href="#" target="_blank").text-block__title.heading
+              button.text-block__title.heading.js-modal-trigger(data-href="link-to-order-here")
                 | Pros and cons to&nbsp;Real Leaders Negotiate Essay Sample
               p.text-block__body.body-text
                 | Mediation. Typically mediators are neutral third parties who help conflicting parties reach a&nbsp;
@@ -160,3 +160,33 @@ block content
                 |   arbitrators&nbsp;— listen to&nbsp;each side of&nbsp;the conflict and then unilaterally decide
                 |   and announce a&nbsp;binding outcome.
   +footer
+  .modal.js-modal
+    .modal__backdrop.js-modal-close
+    .modal__body
+      .modal__title
+        | Do you want a unique essay on this topic written or you
+      .modal__actions
+        a.modal__action.modal__action--primary.js-order-link(href="#") Order now
+        button.modal__action.modal__action--secondary.js-modal-close No, thanks
+
+  script.
+    const modalTrigers = document.querySelectorAll(".js-modal-trigger");
+    const modal = document.querySelector(".js-modal");
+    const modalCloseTriggers = document.querySelectorAll(".js-modal-close");
+    const orderLink = document.querySelector(".js-order-link");
+
+    Array.prototype.slice.call(modalTrigers).forEach(function(element) {
+      element.addEventListener("click", function(e) {
+        const target = e.target;
+        const href = target.getAttribute("data-href");
+
+        modal.classList.add("is-visible");
+        orderLink.setAttribute("href", href);
+      });
+    })
+
+    Array.prototype.slice.call(modalCloseTriggers).forEach(function(element) {
+      element.addEventListener("click", function(e) {
+        modal.classList.remove("is-visible");
+      });
+    });
