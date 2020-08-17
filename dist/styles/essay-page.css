@@ -247,10 +247,45 @@ button.text-block__title:hover {
   left: 50%;
   transform: translateX(-50%);
   background-color: #fff;
-  border-radius: 4px;
-  width: 640px;
-  max-width: 100%;
-  padding: 24px 32px;
+  border-radius: 5px;
+  width: 1140px;
+  max-width: 90%;
+  padding: 60px 96px 48px;
+  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1), 0px 4px 3px rgba(0, 0, 0, 0.25);
+}
+
+.modal__title {
+  margin-bottom: 60px;
+}
+
+.modal__action {
+  display: block;
+  border-radius: 5px;
+  background: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: Montserrat, Gotham, Roboto, "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  cursor: pointer;
+}
+
+.modal__action--primary {
+  color: #368CBF;
+  border: 1px solid #368CBF;
+  box-shadow: 0px 4px 5px #368CBF;
+  margin-bottom: 24px;
+}
+
+.modal__action--secondary {
+  color: #000;
+  border: 1px solid #333;
 }
 
 @media (min-width: 480px) {
@@ -265,6 +300,23 @@ button.text-block__title:hover {
 
   .eassay {
     padding: 32px 48px;
+  }
+}
+
+@media (min-width: 640px) {
+  .modal__actions {
+    display: flex;
+  }
+
+  .modal__action--primary {
+    width: 390px;
+    margin-bottom: 0;
+    margin-right: 24px;
+  }
+
+  .modal__action--secondary {
+    width: 240px;
+    flex-shrink: 0;
   }
 }
 
@@ -337,6 +389,15 @@ button.text-block__title:hover {
 
   .eassay {
     padding: 36px 114px 82px 110px;
+  }
+
+  .modal__body {
+    overflow: hidden;
+    padding-right: 300px;
+    background-image: url(../img/order-bg.png);
+    background-size: 268px 268px;
+    background-position: bottom -12px right 22px;
+    background-repeat: no-repeat;
   }
 }
 
