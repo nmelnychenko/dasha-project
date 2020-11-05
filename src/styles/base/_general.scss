@@ -46,12 +46,14 @@ img {
     }
 
     &--fluid {
-      max-width: 100%;
+        max-width: 100%;
     }
 }
 
 .top-banner {
     position: fixed;
+    // one point higher than header z-index
+    z-index: 100;
     top: 0;
     width: 100%;
     padding: 16px 0 14px;
