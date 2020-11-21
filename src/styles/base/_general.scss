@@ -54,8 +54,8 @@ img {
     position: fixed;
     // one point higher than header z-index
     z-index: 100;
-    width: 280px;
-    padding: 24px 24px 32px;
+    width: 278px;
+    padding: 27px 20px 38px 24px;
     background: #fff;
     top: 150px;
     left: 50%;
@@ -109,7 +109,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    margin: 0 auto;
+    width: 189px;
     height: 42px;
     font-family: $secondary-font;
     font-weight: bold;
@@ -124,9 +125,11 @@ img {
     box-shadow: 0px 4px 3px rgba(#368CBF, 0.75);
 
     @media(min-width: 640px) {
+        margin: 0;
         border: 1px solid #fff;
         color: #FFFFFF;
         width: 260px;
+        box-shadow: none;
     }
 }
 
@@ -135,10 +138,10 @@ img {
     position: absolute;
     align-items: center;
     justify-content: center;
-    top: -34px;
+    top: -38px;
     right: 0;
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     color: #368CBF;
     background: #fff;
@@ -156,11 +159,11 @@ img {
 }
 
 .top-banner__decline-button {
-    margin-top: 12px;
+    margin: 12px auto 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 189px;
     height: 42px;
     font-family: $secondary-font;
     font-weight: bold;

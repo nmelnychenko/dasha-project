@@ -219,10 +219,17 @@ block content
           document.body.insertAdjacentHTML('beforeend', baner);
 
           const closingElements = document.querySelectorAll(".top-banner__close, .top-banner__decline-button");
+          const topBanner = document.querySelector(".top-banner");
 
           [...closingElements].forEach(button => button.addEventListener("click", function() {
-            document.querySelector(".top-banner").remove();
+            topBanner.remove();
           }));
+
+          window.addEventListener("click", function(e) {
+            if (window.innerWidth < 640 && e.target !== topBanner) {
+              topBanner.remove();
+            }
+          })
         }, timeout);
       }
     };
