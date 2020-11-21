@@ -199,10 +199,13 @@ block content
               <div class="top-banner__inner container">
                 <div class="top-banner__title subtitle subtitle--dark">Order unique essay written for you</div>
                 <a class="top-banner__link" href="${orderLink}">ORDER NOW</a>
+                <button class="top-banner__decline-button">
+                  NO, THANKS
+                </button>
                 <button class="top-banner__close">
                   <span class="visually-hidden">Close top banner</span>
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.2641 1.41L12.8696 0L7.34105 5.59L1.81247 0L0.417969 1.41L5.94654 7L0.417969 12.59L1.81247 14L7.34105 8.41L12.8696 14L14.2641 12.59L8.73555 7L14.2641 1.41Z" fill="white"/>
+                    <path d="M14.2641 1.41L12.8696 0L7.34105 5.59L1.81247 0L0.417969 1.41L5.94654 7L0.417969 12.59L1.81247 14L7.34105 8.41L12.8696 14L14.2641 12.59L8.73555 7L14.2641 1.41Z" fill="currentCollor"/>
                   </svg>
                 </button>
               </div>
@@ -215,10 +218,11 @@ block content
         setTimeout(function() {
           document.body.insertAdjacentHTML('beforeend', baner);
 
-          document.querySelector(".top-banner__close").addEventListener("click", function() {
+          const closingElements = document.querySelectorAll(".top-banner__close, .top-banner__decline-button");
 
+          [...closingElements].forEach(button => button.addEventListener("click", function() {
             document.querySelector(".top-banner").remove();
-          });
+          }));
         }, timeout);
       }
     };
