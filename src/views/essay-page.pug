@@ -177,10 +177,10 @@ block content
 
 
   script.
-    const modalTrigers = document.querySelectorAll(".js-modal-trigger");
-    const modal = document.querySelector(".js-modal");
-    const modalCloseTriggers = document.querySelectorAll(".js-modal-close");
-    const orderLink = document.querySelector(".js-order-link");
+    const modalTrigers = document.querySelectorAll(`.js-modal-trigger`);
+    const modal = document.querySelector(`.js-modal`);
+    const modalCloseTriggers = document.querySelectorAll(`.js-modal-close`);
+    const orderLink = document.querySelector(`.js-order-link`);
 
     Array.prototype.slice.call(modalTrigers).forEach(function(element) {
       element.addEventListener("click", function(e) {
