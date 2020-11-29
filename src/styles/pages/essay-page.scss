@@ -704,7 +704,8 @@ button.text-block__title {
 
 .eassay-utility {
   position: relative;
-  padding: 49px 0 37px;
+  padding-top: 49px;
+  padding-bottom: 0;
 
   @media (min-width: 768px) {
     display: flex;
@@ -772,6 +773,7 @@ button.text-block__title {
 
 .extra-help-cta {
   text-align: center;
+  padding-bottom: 33px;
 
   .eassay + &.eassay {
     margin-top: 21px;
