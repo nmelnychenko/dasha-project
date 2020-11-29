@@ -391,7 +391,7 @@ button.text-block__title {
     top: 60px;
     transform: translateX(-50%);
     max-width: 90%;
-    padding-right: 300px;
+    padding: 60px 300px 48px 96px;
     background-image: url(../img/order-bg.png);
     background-size: 268px 268px;
     background-position: bottom -12px right 22px;
@@ -401,13 +401,10 @@ button.text-block__title {
 
 .modal__title {
   text-align: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 700;
   margin-bottom: 37px;
-  text-transform: uppercase;
 
   @media (min-width: 768px) {
+    text-align: left;
     margin-bottom: 60px;
   }
 }
@@ -439,6 +436,7 @@ button.text-block__title {
 
   @media(min-width: 768px) {
     height: 60px;
+    margin-left: 0;
     line-height: 60px;
     max-width: unset;
   }
@@ -528,19 +526,32 @@ button.text-block__title {
 
 .video-trailer {
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-start;
+  
+  @media (max-width: 359px) {
+    .film-poster {
+      display: none;
+    }
+  }
 }
 
 .eassay.video-trailer {
   position: relative;
-  padding-right: 55px;
+  padding-right: 24px;
+
+  @media (min-width: 768px) {
+    padding-right: 55px;
+  }
 }
 
 .video-trailer__column--description {
   width: 204px;
-  flex-shrink: 0;
-  margin-right: 69px;
+  margin-right: 8px;
+
+  @media (min-width: 768px) {
+    flex-shrink: 0;
+    margin-right: 69px;
+  }
 }
 
 .video-trailer__column--video {
