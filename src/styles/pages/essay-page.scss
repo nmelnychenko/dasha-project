@@ -410,7 +410,7 @@ button.text-block__title {
 }
 
 .modal__actions {
-  @media(min-width: 768px) {
+  @media(min-width: 960px) {
     display: flex;
   }
 }
@@ -434,7 +434,7 @@ button.text-block__title {
   line-height: 40px;
   cursor: pointer;
 
-  @media(min-width: 768px) {
+  @media(min-width: 960px) {
     height: 60px;
     margin-left: 0;
     line-height: 60px;
@@ -448,6 +448,10 @@ button.text-block__title {
     margin-bottom: 24px;
 
     @media(min-width: 768px) {
+      margin-left: 0;
+    }
+
+    @media(min-width: 960px) {
       width: 390px;
       margin-bottom: 0;
       margin-right: 24px;
@@ -459,6 +463,10 @@ button.text-block__title {
     border: 1px solid #333;
 
     @media(min-width: 768px) {
+      margin-left: 0;
+    }
+
+    @media(min-width: 960px) {
       width: 240px;
       flex-shrink: 0;
     }
@@ -790,5 +798,94 @@ button.text-block__title {
   .order-action {
     max-width: 282px;
     margin: 0 auto;
+  }
+}
+
+.blurred-area {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 253, 253, 0.08);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+  }
+}
+
+.fixed-cta {
+  position: fixed;
+  top: 320px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 206px;
+  z-index: 2;
+
+  @media (min-width: 768px) {
+    top: 430px;
+    left: calc(50% - 113px);
+  }
+
+  @media (min-width: 1200px) {
+    left: calc(50% - 138px);
+  }
+
+  &--with-title {
+    width: 240px;
+    top: 200px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      width: calc(100% - 266px);
+      max-width: 880px;
+      padding: 0 24px;
+    }
+
+    @media (min-width: 1200px) {
+      width: calc(100% - 316px);
+    }
+  }
+}
+
+.fixed-cta__tag {
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 10px;
+  font-family: $secondary-font;
+
+  @media (min-width: 768px) {
+    margin-bottom: 20px;
+  }
+}
+
+.fixed-cta__title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  font-family: $base-font;
+  margin-bottom: 27px;
+  color: #368CBF;
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    line-height: 43px;
+    margin-bottom: 54px;
+  }
+}
+
+.fixed-cta__action {
+  width: 206px;
+  margin: 0 auto;
+}
+
+.desktop-only {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
   }
 }
