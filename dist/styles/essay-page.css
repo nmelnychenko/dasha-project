@@ -549,7 +549,6 @@ button.text-block__title:hover {
 
 .fixed-cta.is-absolute {
   position: absolute;
-  top: 1540px;
 }
 
 .fixed-cta__tag {

@@ -222,10 +222,12 @@ block content
       const isCtaAbsolute = fixedCtaSection.classList.contains("is-absolute");
 
       if (delta > 77 && !isCtaAbsolute) {
+        fixedCtaSection.setAttribute("style", `top: ${fixedCtaTop + window.scrollY}px`);
         toggleAbsoluteClass();
       }
 
       if (fixedCtaTop > 430 && isCtaAbsolute) {
+        fixedCtaSection.removeAttribute("style");
         toggleAbsoluteClass();
       }
     }
