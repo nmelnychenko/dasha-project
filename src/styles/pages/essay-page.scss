@@ -849,6 +849,11 @@ button.text-block__title {
       width: calc(100% - 316px);
     }
   }
+
+  &.is-absolute {
+    position: absolute;
+    top: 1540px;
+  }
 }
 
 .fixed-cta__tag {

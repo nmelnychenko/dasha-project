@@ -37,6 +37,11 @@ block content
               .text-block__tag Free ideas for
               button.text-block__title.heading.js-modal-trigger(data-href="link-to-order-here")
                 | Introduction to&nbsp;Leadership and Negotiation Skills Essay Sample
+              p.text-block__body.body-text
+                | Having superior negotiation skills is&nbsp;conductive to&nbsp;the success in&nbsp;personal
+                | life and career development. This essay will indicate that my&nbsp;natural preferences for different
+                | influencing tactics, comparisons between theory and practice, and a&nbsp;personal action plan to&nbsp;
+                | improve negotiation skills based on&nbsp;the role-play activity.
               p.text-block__body.body-text.blurred-area
                 | Having superior negotiation skills is&nbsp;conductive to&nbsp;the success in&nbsp;personal
                 | life and career development. This essay will indicate that my&nbsp;natural preferences for different
@@ -47,6 +52,13 @@ block content
               button.text-block__title.heading.js-modal-trigger(data-href="link-to-order-here")
                 | Pros and cons to&nbsp;Real Leaders Negotiate Essay Sample
               p.text-block__body.body-text.blurred-area
+                | Mediation. Typically mediators are neutral third parties who help conflicting parties reach a&nbsp;
+                | voluntary agreement. The goal of&nbsp;mediation is&nbsp;to&nbsp;build consensus around a&nbsp;
+                | mutually beneficial solution. By&nbsp;acting as&nbsp;a&nbsp;mediator, you can facilitate joint problem
+                | solving. Arbitration. Arbitrators&nbsp;&mdash; or&nbsp;organizational leaders playing the part of&nbsp;
+                | arbitrators&nbsp;&mdash; listen to&nbsp;each side of&nbsp;the conflict and then unilaterally decide
+                | and announce a&nbsp;binding outcome.
+              p.text-block__body.body-text
                 | Mediation. Typically mediators are neutral third parties who help conflicting parties reach a&nbsp;
                 | voluntary agreement. The goal of&nbsp;mediation is&nbsp;to&nbsp;build consensus around a&nbsp;
                 | mutually beneficial solution. By&nbsp;acting as&nbsp;a&nbsp;mediator, you can facilitate joint problem
@@ -73,7 +85,7 @@ block content
                 | department head&mdash;negotiates support from followers by&nbsp;appealing to&nbsp;their interests,
                 | communicating with each of&nbsp;them in&nbsp;the right voice and medium, and forging a&nbsp;
                 | single compelling vision that all can get behind.
-            section.essay__section.text-block
+            section.essay__section.text-block.essay__section--references
               .text-block__tag Free ideas for
               h2.text-block__title.heading References
               p.text-block__body.body-text
@@ -195,6 +207,30 @@ block content
             path(fill-rule='evenodd' clip-rule='evenodd' d='M8.06055 25.0607L24.0605 9.06066L22.9999 8L6.99989 24L8.06055 25.0607Z' fill='#368CBF')
             path(fill-rule='evenodd' clip-rule='evenodd' d='M6.91099 9.16239L23.0996 24.9716L24.1476 23.8984L7.959 8.08922L6.91099 9.16239Z' fill='#368CBF')
 
+  script.
+    const reference = document.querySelector(".essay__section--references");
+    const fixedCtaSection = document.querySelector(".fixed-cta");
+
+    const toggleAbsoluteClass = () => {
+      fixedCtaSection.classList.toggle("is-absolute");
+    }
+
+    const checkButtonState = () => {
+      const fixedCtaTop = fixedCtaSection.getBoundingClientRect().top;
+      const referenceSectionTop = reference.getBoundingClientRect().top;
+      const delta = fixedCtaTop - referenceSectionTop;
+      const isCtaAbsolute = fixedCtaSection.classList.contains("is-absolute");
+
+      if (delta > 77 && !isCtaAbsolute) {
+        toggleAbsoluteClass();
+      }
+
+      if (fixedCtaTop > 430 && isCtaAbsolute) {
+        toggleAbsoluteClass();
+      }
+    }
+
+    window.addEventListener("scroll", checkButtonState);
 
   script.
     const modalTrigers = document.querySelectorAll(`.js-modal-trigger`);

@@ -23,8 +23,8 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png"><link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Solway:400,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.min.css">
-    <link rel="stylesheet" href="styles/essay-page.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/essay-page.css">
   </head>
   <body>
     <header class="header">
@@ -56,6 +56,12 @@
               <section class="essay__section text-block__tag">
                 <div class="text-block__tag">Free ideas for</div>
                 <button class="text-block__title heading js-modal-trigger" data-href="link-to-order-here">Introduction to&nbsp;Leadership and Negotiation Skills Essay Sample</button>
+                <p class="text-block__body body-text">
+                  Having superior negotiation skills is&nbsp;conductive to&nbsp;the success in&nbsp;personal
+                  life and career development. This essay will indicate that my&nbsp;natural preferences for different
+                  influencing tactics, comparisons between theory and practice, and a&nbsp;personal action plan to&nbsp;
+                  improve negotiation skills based on&nbsp;the role-play activity.
+                </p>
                 <p class="text-block__body body-text blurred-area">
                   Having superior negotiation skills is&nbsp;conductive to&nbsp;the success in&nbsp;personal
                   life and career development. This essay will indicate that my&nbsp;natural preferences for different
@@ -67,6 +73,14 @@
                 <div class="text-block__tag">Free ideas for</div>
                 <button class="text-block__title heading js-modal-trigger" data-href="link-to-order-here">Pros and cons to&nbsp;Real Leaders Negotiate Essay Sample</button>
                 <p class="text-block__body body-text blurred-area">
+                  Mediation. Typically mediators are neutral third parties who help conflicting parties reach a&nbsp;
+                  voluntary agreement. The goal of&nbsp;mediation is&nbsp;to&nbsp;build consensus around a&nbsp;
+                  mutually beneficial solution. By&nbsp;acting as&nbsp;a&nbsp;mediator, you can facilitate joint problem
+                  solving. Arbitration. Arbitrators&nbsp;&mdash; or&nbsp;organizational leaders playing the part of&nbsp;
+                  arbitrators&nbsp;&mdash; listen to&nbsp;each side of&nbsp;the conflict and then unilaterally decide
+                  and announce a&nbsp;binding outcome.
+                </p>
+                <p class="text-block__body body-text">
                   Mediation. Typically mediators are neutral third parties who help conflicting parties reach a&nbsp;
                   voluntary agreement. The goal of&nbsp;mediation is&nbsp;to&nbsp;build consensus around a&nbsp;
                   mutually beneficial solution. By&nbsp;acting as&nbsp;a&nbsp;mediator, you can facilitate joint problem
@@ -99,7 +113,7 @@
                   single compelling vision that all can get behind.
                 </p>
               </section>
-              <section class="essay__section text-block">
+              <section class="essay__section text-block essay__section--references">
                 <div class="text-block__tag">Free ideas for</div>
                 <h2 class="text-block__title heading">References</h2>
                 <p class="text-block__body body-text">
@@ -245,10 +259,36 @@
       </div>
     </div>
     <script>
-      const modalTrigers = document.querySelectorAll(`.min.js-modal-trigger`);
-      const modal = document.querySelector(`.min.js-modal`);
-      const modalCloseTriggers = document.querySelectorAll(`.min.js-modal-close`);
-      const orderLink = document.querySelector(`.min.js-order-link`);
+      const reference = document.querySelector(".essay__section--references");
+      const fixedCtaSection = document.querySelector(".fixed-cta");
+      
+      const toggleAbsoluteClass = () => {
+        fixedCtaSection.classList.toggle("is-absolute");
+      }
+      
+      const checkButtonState = () => {
+        const fixedCtaTop = fixedCtaSection.getBoundingClientRect().top;
+        const referenceSectionTop = reference.getBoundingClientRect().top;
+        const delta = fixedCtaTop - referenceSectionTop;
+        const isCtaAbsolute = fixedCtaSection.classList.contains("is-absolute");
+      
+        if (delta > 77 && !isCtaAbsolute) {
+          toggleAbsoluteClass();
+        }
+      
+        if (fixedCtaTop > 430 && isCtaAbsolute) {
+          toggleAbsoluteClass();
+        }
+      }
+      
+      window.addEventListener("scroll", checkButtonState);
+      
+    </script>
+    <script>
+      const modalTrigers = document.querySelectorAll(`.js-modal-trigger`);
+      const modal = document.querySelector(`.js-modal`);
+      const modalCloseTriggers = document.querySelectorAll(`.js-modal-close`);
+      const orderLink = document.querySelector(`.js-order-link`);
       
       Array.prototype.slice.call(modalTrigers).forEach(function(element) {
         element.addEventListener("click", function(e) {
