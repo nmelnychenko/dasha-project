@@ -39,6 +39,8 @@ body {
 }
 
 .section--intro {
+  position: relative;
+
   @media(min-width: 768px) {
     padding-bottom: 60px;
   }
@@ -52,6 +54,7 @@ body {
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
+      flex-wrap: wrap;
     }
   }
 
@@ -88,23 +91,79 @@ body {
         width: calc(100% - 276px);
       }
     }
+
+    &.section__column--full-width {
+      flex-basis: 100%;
+      max-width: 1090px;
+    }
+
+    &.section__column--full-width-statistics {
+      flex-basis: 100%;
+      width: 100%;
+      align-items: flex-start;
+
+      .statistic {
+        margin-top: 40px;
+        align-items: flex-start;
+
+        @media (min-width: 768px) {
+          margin-top: 70px;
+        }
+      }
+
+      .statistic__numbers,
+      .statistic__pic {
+        @media (min-width: 768px) {
+          width: auto;
+          margin-top: 0;
+          margin-left: 0;
+        }
+      }
+
+      .statistic__numbers {
+        @media (min-width: 768px) {
+          display: block;
+          margin-right: 40px;
+        }
+      }
+
+      .statistic__item,
+      .statistic__desc,
+      .statistic__pic-label {
+        @media (min-width: 768px) {
+          margin-left: 0;
+          text-align: left;
+        }
+      }
+    }
+
+    .statistic__pic img {
+      @media (min-width: 768px) {
+        display: block;
+        width: auto;
+        height: 102px;
+        margin-bottom: 18px;
+      }
+    }
   }
 
   .statistic {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
+    @media (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
   }
 
   .statistic__item {
     display: block;
 
-    & + .statistic__item {
-      margin-left: 18px;
-    }
-
     @media(min-width: 768px) {
       text-align: right;
+
+      & + .statistic__item {
+        margin-top: 20px;
+      }
     }
   }
 }
@@ -817,6 +876,22 @@ button.text-block__title {
   }
 }
 
+.blurred-article {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 252, 252, 0.76);
+    backdrop-filter: blur(6px);
+    z-index: 1;
+  }
+}
+
 .fixed-cta {
   position: fixed;
   top: 320px;
@@ -834,13 +909,16 @@ button.text-block__title {
     left: calc(50% - 138px);
   }
 
-  &--with-title {
+  &.fixed-cta--with-title {
+    position: fixed;
     width: 240px;
     top: 200px;
     text-align: center;
 
     @media (min-width: 768px) {
+      top: 320px;
       width: calc(100% - 266px);
+      left: 50%;
       max-width: 880px;
       padding: 0 24px;
     }
