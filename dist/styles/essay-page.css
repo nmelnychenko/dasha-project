@@ -48,9 +48,11 @@ body {
   margin-bottom: 16px;
 }
 
-.section--intro .section__column.section__column--full-width {
+.section--intro .section__column.section__column--full-width:nth-child(1) {
   flex-basis: 100%;
+  width: 100%;
   max-width: 1090px;
+  margin: 0 auto;
 }
 
 .section--intro .section__column.section__column--full-width-statistics {
