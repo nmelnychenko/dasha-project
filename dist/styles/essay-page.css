@@ -811,7 +811,7 @@ button.text-block__title:hover {
   }
 
   .fixed-cta.fixed-cta--with-title {
-    top: 320px;
+    top: 260px;
     width: calc(100% - 266px);
     left: 50%;
     max-width: 880px;
