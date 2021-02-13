@@ -991,3 +991,48 @@ button.text-block__title {
     display: block;
   }
 }
+
+.section--intro {
+  .statistic--top {
+    padding-top: 24px;
+    align-items: flex-end;
+
+    @media (min-width: 768px) {
+      padding-top: 0;
+    }
+
+    .statistic__numbers {
+      justify-content: flex-start;
+    }
+
+    .statistic__item {
+      text-align: left;
+    }
+
+    .statistic__item + .statistic__item {
+      margin-top: 0;
+      margin-left: 24px;
+
+      @media(min-width: 1200px) {
+        margin-left: 48px;
+      }
+    }
+
+    .statistic__desc,
+    .statistic__pic-label {
+      text-align: left;
+    }
+
+    .statistic__pic {
+      @media (min-width: 768px) {
+        width: 100%;
+        margin-left: 0;
+
+        .statistic__graph {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
