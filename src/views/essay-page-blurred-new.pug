@@ -1,0 +1,190 @@
+extends layouts/default
+include helpers/mixins
+include ../blocks/modules/header/header
+include ../blocks/modules/footer/footer
+
+block variables
+  - const title = "Essaysampler | Essay page"
+block styles
+  link(rel="stylesheet" href="styles/essay-page.css")
+block content
+  +header
+  .container
+    .breadcrumbs.desktop-only
+      ul.breadcrumbs__list
+        li.breadcrumbs__item
+          a.breadcrumbs__link(href="#") Essay samples
+        li.breadcrumbs__item
+          a.breadcrumbs__link(href="#") Business
+        li.breadcrumbs__item.breadcrumbs__item--last
+          span.breadcrumbs__body Leadership
+  section.section.section--intro
+    .container.container--wide
+      .section__row
+        .section__column
+          article.eassay.eassay--date-exp
+            .category Essay sample
+            h1.essay__title.title
+              | Why negotiation skill is&nbsp;so&nbsp;important in&nbsp;leadership
+            p.essay__disclaimer.text-block__tag.blurred-area
+              b Disclaimer.
+              | The materials on this page are intended for informational and educational purposes. No individuals
+              | should use the information, resources or tools contained herein to self-diagnosis or self-treat
+              | any health-related condition. The content of the website is not meant to be a substitute for advice
+              | provided by a doctor or other qualified health care professional. The company will not be held
+              | responsible for any negative consequences arising from the use of information posted on this site.
+            section.essay__section.text-block__tag
+              .text-block__tag Free ideas for
+              button.text-block__title.heading.js-modal-trigger(data-href="link-to-order-here")
+                | Introduction to&nbsp;Leadership and Negotiation Skills Essay Sample
+              p.text-block__body.body-text
+                | Having superior negotiation skills is&nbsp;conductive to&nbsp;the success in&nbsp;personal
+                | life and career development. This essay will indicate that my&nbsp;natural preferences for different
+                | influencing tactics, comparisons between theory and practice, and a&nbsp;personal action plan to&nbsp;
+                | improve negotiation skills based on&nbsp;the role-play activity.
+              p.text-block__body.body-text.blurred-area
+                | Having superior negotiation skills is&nbsp;conductive to&nbsp;the success in&nbsp;personal
+                | life and career development. This essay will indicate that my&nbsp;natural preferences for different
+                | influencing tactics, comparisons between theory and practice, and a&nbsp;personal action plan to&nbsp;
+                | improve negotiation skills based on&nbsp;the role-play activity.
+            section.essay__section.text-block
+              .text-block__tag Free ideas for
+              button.text-block__title.heading.js-modal-trigger(data-href="link-to-order-here")
+                | Pros and cons to&nbsp;Real Leaders Negotiate Essay Sample
+              p.text-block__body.body-text.blurred-area
+                | Mediation. Typically mediators are neutral third parties who help conflicting parties reach a&nbsp;
+                | voluntary agreement. The goal of&nbsp;mediation is&nbsp;to&nbsp;build consensus around a&nbsp;
+                | mutually beneficial solution. By&nbsp;acting as&nbsp;a&nbsp;mediator, you can facilitate joint problem
+                | solving. Arbitration. Arbitrators&nbsp;&mdash; or&nbsp;organizational leaders playing the part of&nbsp;
+                | arbitrators&nbsp;&mdash; listen to&nbsp;each side of&nbsp;the conflict and then unilaterally decide
+                | and announce a&nbsp;binding outcome.
+              p.text-block__body.body-text
+                | Mediation. Typically mediators are neutral third parties who help conflicting parties reach a&nbsp;
+                | voluntary agreement. The goal of&nbsp;mediation is&nbsp;to&nbsp;build consensus around a&nbsp;
+                | mutually beneficial solution. By&nbsp;acting as&nbsp;a&nbsp;mediator, you can facilitate joint problem
+                | solving. Arbitration. Arbitrators&nbsp;&mdash; or&nbsp;organizational leaders playing the part of&nbsp;
+                | arbitrators&nbsp;&mdash; listen to&nbsp;each side of&nbsp;the conflict and then unilaterally decide
+                | and announce a&nbsp;binding outcome.
+            section.essay__section.text-block
+              .text-block__tag Free ideas for
+              h2.text-block__title.heading
+                | Citations about How Good Are Your Negotiation Skills
+              p.text-block__body.body-text.blurred-area
+                | According to&nbsp;Moussa, deliberately, systematically, and utilizing a&nbsp;four-step process.
+                | &laquo;Great negotiators approach practice by&nbsp;first reminding themselves of&nbsp;the three key
+                | principles of&nbsp;strategic persuasion [influencing, persuading, negotiating], as&nbsp;well as&nbsp;
+                | the four-step process [preparation, information exchange, bargaining or&nbsp;communicating, and
+                | closing and commitment],&raquo; he&nbsp;says.
+            section.essay__section.text-block
+              .text-block__tag Free ideas for
+              h2.text-block__title.heading
+                | Conclusion to&nbsp;Why it&nbsp;is&nbsp;essential for a&nbsp;leader to&nbsp;use the skills and mindset
+                | of&nbsp;a&nbsp;negotiator?
+              p.text-block__body.body-text
+                | Like a&nbsp;skilled diplomat, a&nbsp;leader&mdash;whether a&nbsp;corporate CEO or&nbsp;a&nbsp;
+                | department head&mdash;negotiates support from followers by&nbsp;appealing to&nbsp;their interests,
+                | communicating with each of&nbsp;them in&nbsp;the right voice and medium, and forging a&nbsp;
+                | single compelling vision that all can get behind.
+            section.essay__section.text-block.essay__section--references
+              .text-block__tag Free ideas for
+              h2.text-block__title.heading References
+              p.text-block__body.body-text
+                | Nadler, J., Thompson, L., &amp;&nbsp;Boven, L.&nbsp;V. (2003). Learning negotiation skills: Four
+                | models of&nbsp;knowledge creation and transfer. Management Science, 49, 529-540.
+              p.text-block__body.body-text
+                | Weingart, L.R., Hyder, E.B., &amp;&nbsp;Prietula, M.J. (1996). Knowledge matters: The effect
+                | of&nbsp;tactical descriptions on&nbsp;negotiation behavior and outcome. Journal of&nbsp;Personality
+                | and Social Psychology, 70, 1205-1217.
+
+            section.essay__section.text-block.essay__section--date
+              .post-date 01/01 /2021 Created
+
+
+        .section__column
+          .statistic.statistic--top.statistic--pages-exp
+            .statistic__numbers
+              .statistic__item
+                .statistic__value 925
+                .statistic__desc.heading Words
+              .statistic__item
+                .statistic__value 2
+                .statistic__desc.heading References
+              .statistic__item
+                .statistic__value 3
+                .statistic__desc.heading Pages
+            .statistic__pic
+              img.statistic__graph(src="img/graph.png" alt="essay statistic graph")
+              .statistic__pic-label.heading Topic Popularity
+          .sidebar-order
+            a.order-action(href="#") Order essay
+
+
+  +footer
+  .fixed-cta
+    button.fixed-cta__action.order-action.order-action--secondary.js-modal-trigger(data-href="link-to-order-here")
+      | ORDER ESSAY
+  .modal.js-modal
+    .modal__backdrop.js-modal-close
+    .modal__body
+      .modal__title.subtitle
+        | Do you want a unique essay on this topic written for you?
+      .modal__actions
+        a.modal__action.modal__action--primary.js-order-link(href="#") Order now
+        button.modal__action.modal__action--secondary.js-modal-close No, thanks
+      .modal__close.js-modal-close
+        .modal__close-icon
+          svg(width='32' height='32' viewbox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+            circle(cx='16' cy='16' r='15.5' fill='white' stroke='#368CBF')
+            path(fill-rule='evenodd' clip-rule='evenodd' d='M8.06055 25.0607L24.0605 9.06066L22.9999 8L6.99989 24L8.06055 25.0607Z' fill='#368CBF')
+            path(fill-rule='evenodd' clip-rule='evenodd' d='M6.91099 9.16239L23.0996 24.9716L24.1476 23.8984L7.959 8.08922L6.91099 9.16239Z' fill='#368CBF')
+
+  script.
+    const reference = document.querySelector(".essay__section--references");
+    const fixedCtaSection = document.querySelector(".fixed-cta");
+
+    const toggleAbsoluteClass = () => {
+      fixedCtaSection.classList.toggle("is-absolute");
+    }
+
+    const checkButtonState = () => {
+      const fixedCtaTop = fixedCtaSection.getBoundingClientRect().top;
+      const referenceSectionTop = reference.getBoundingClientRect().top;
+      const delta = fixedCtaTop - referenceSectionTop;
+      const isCtaAbsolute = fixedCtaSection.classList.contains("is-absolute");
+
+      if (delta > 77 && !isCtaAbsolute) {
+        fixedCtaSection.setAttribute("style", `top: ${fixedCtaTop + window.scrollY}px`);
+        toggleAbsoluteClass();
+      }
+
+      if (fixedCtaTop > 430 && isCtaAbsolute) {
+        fixedCtaSection.removeAttribute("style");
+        toggleAbsoluteClass();
+      }
+    }
+
+    checkButtonState();
+
+    window.addEventListener("scroll", checkButtonState);
+
+  script.
+    const modalTrigers = document.querySelectorAll(`.js-modal-trigger`);
+    const modal = document.querySelector(`.js-modal`);
+    const modalCloseTriggers = document.querySelectorAll(`.js-modal-close`);
+    const orderLink = document.querySelector(`.js-order-link`);
+
+    Array.prototype.slice.call(modalTrigers).forEach(function(element) {
+      element.addEventListener("click", function(e) {
+        const target = e.target;
+        const href = target.getAttribute("data-href");
+
+        modal.classList.add("is-visible");
+        orderLink.setAttribute("href", href);
+      });
+    })
+
+    Array.prototype.slice.call(modalCloseTriggers).forEach(function(element) {
+      element.addEventListener("click", function(e) {
+        modal.classList.remove("is-visible");
+      });
+    });

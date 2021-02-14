@@ -261,6 +261,10 @@ body {
 
   @media(min-width: 992px) {
     padding: 36px 114px 82px 110px;
+
+    &.eassay--date-exp {
+      padding-bottom: 26px;
+    }
   }
 
   & + & {
@@ -1034,5 +1038,77 @@ button.text-block__title {
         }
       }
     }
+  }
+}
+
+.statistic--top {
+  &.statistic--pages-exp {
+    flex-wrap: wrap;
+
+    .statistic__pic {
+      display: none;
+      
+      @media (min-width: 768px) {
+        display: block;
+        margin-left: auto;
+      }
+    }
+
+    .statistic__pic-label {
+      @media (min-width: 768px) {
+        text-align: right;
+      }
+    }
+
+    .statistic__numbers {
+      flex-wrap: wrap;
+    }
+
+    .statistic__item {
+      @media (min-width: 768px) {
+        margin-left: auto;
+        text-align: right;
+      }
+
+      &:last-child {
+        @media (min-width: 768px) {
+          margin-left: auto;
+          margin-top: 56px;
+        }
+      }
+
+      & + .statistic__item {
+        @media (min-width: 1200px) {
+          margin-left: 18px;
+
+          &:last-child {
+            margin-left: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+.statistic--bottom {
+  &.statistic--pages-exp {
+    flex-wrap: wrap;
+  }
+}
+
+.essay__section.essay__section--date {
+  margin-top: 36px;
+}
+
+.post-date {
+  font-family: $secondary-font;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 20px;
   }
 }

@@ -637,6 +637,34 @@ button.text-block__title:hover {
   text-align: left;
 }
 
+.statistic--top.statistic--pages-exp {
+  flex-wrap: wrap;
+}
+
+.statistic--top.statistic--pages-exp .statistic__pic {
+  display: none;
+}
+
+.statistic--top.statistic--pages-exp .statistic__numbers {
+  flex-wrap: wrap;
+}
+
+.statistic--bottom.statistic--pages-exp {
+  flex-wrap: wrap;
+}
+
+.essay__section.essay__section--date {
+  margin-top: 36px;
+}
+
+.post-date {
+  font-family: Montserrat, Gotham, Roboto, "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
 @media (min-width: 480px) {
   .statistic__desc,
   .statistic__pic-label {
@@ -868,6 +896,30 @@ button.text-block__title:hover {
     width: 100%;
     height: auto;
   }
+
+  .statistic--top.statistic--pages-exp .statistic__pic {
+    display: block;
+    margin-left: auto;
+  }
+
+  .statistic--top.statistic--pages-exp .statistic__pic-label {
+    text-align: right;
+  }
+
+  .statistic--top.statistic--pages-exp .statistic__item {
+    margin-left: auto;
+    text-align: right;
+  }
+
+  .statistic--top.statistic--pages-exp .statistic__item:last-child {
+    margin-left: auto;
+    margin-top: 56px;
+  }
+
+  .post-date {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 @media (min-width: 960px) {
@@ -915,6 +967,10 @@ button.text-block__title:hover {
 
   .eassay {
     padding: 36px 114px 82px 110px;
+  }
+
+  .eassay.eassay--date-exp {
+    padding-bottom: 26px;
   }
 
   .video-trailer__column--video .film-poster {
@@ -973,6 +1029,14 @@ button.text-block__title:hover {
 
   .section--intro .statistic--top .statistic__item + .statistic__item {
     margin-left: 48px;
+  }
+
+  .statistic--top.statistic--pages-exp .statistic__item + .statistic__item {
+    margin-left: 18px;
+  }
+
+  .statistic--top.statistic--pages-exp .statistic__item + .statistic__item:last-child {
+    margin-left: auto;
   }
 }
 
