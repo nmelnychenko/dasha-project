@@ -48,6 +48,11 @@ body {
   margin-bottom: 16px;
 }
 
+.section--intro .section__column:nth-child(2).section__column--bottom {
+  order: 1;
+  margin-top: 30px;
+}
+
 .section--intro .section__column.section__column--full-width:nth-child(1) {
   margin-top: 34px;
   flex-basis: 100%;
@@ -650,11 +655,22 @@ button.text-block__title:hover {
 }
 
 .statistic--bottom.statistic--pages-exp {
-  flex-wrap: wrap;
+  display: flex;
+  align-items: flex-start;
+}
+
+.section__column.section__column--full-width-statistics .statistic--bottom.statistic--pages-exp {
+  align-items: flex-start;
+}
+
+.statistic--bottom.statistic--pages-exp .statistic__pic {
+  display: none;
 }
 
 .essay__section.essay__section--date {
+  position: relative;
   margin-top: 36px;
+  z-index: 5;
 }
 
 .post-date {
@@ -914,6 +930,53 @@ button.text-block__title:hover {
   .statistic--top.statistic--pages-exp .statistic__item:last-child {
     margin-left: auto;
     margin-top: 56px;
+  }
+
+  .statistic--bottom.statistic--pages-exp .statistic__pic {
+    display: block;
+    max-width: 260px;
+    margin-left: 0;
+  }
+
+  .statistic--bottom.statistic--pages-exp .statistic__pic .statistic__graph {
+    width: 100%;
+    height: auto;
+  }
+
+  .statistic--bottom.statistic--pages-exp .statistic__numbers {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .statistic--bottom.statistic--pages-exp .statistic__numbers .statistic__item + .statistic__item {
+    margin-top: 0;
+    margin-left: 20px;
+    margin-bottom: 56px;
+  }
+
+  .statistic--bottom.statistic--pages-exp .statistic__numbers .statistic__item:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .section__column--full-width-statistics .statistic--bottom.statistic--pages-exp .statistic__numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .section__column--full-width-statistics .statistic--bottom.statistic--pages-exp .statistic__numbers .statistic__item {
+    flex-basis: 40%;
+  }
+
+  .section__column--full-width-statistics .statistic--bottom.statistic--pages-exp .statistic__numbers .statistic__item + .statistic__item {
+    margin-top: 0;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .section__column--full-width-statistics .statistic--bottom.statistic--pages-exp .statistic__numbers .statistic__item:last-of-type {
+    margin-bottom: 0;
+    margin-left: 0;
   }
 
   .post-date {

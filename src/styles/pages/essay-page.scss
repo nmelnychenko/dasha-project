@@ -62,6 +62,11 @@ body {
     &:nth-child(2) {
       order: -1;
       margin-bottom: 16px;
+
+      &.section__column--bottom {
+        order: 1;
+        margin-top: 30px;
+      }
     }
 
     @media(min-width: 768px) {
@@ -1092,12 +1097,73 @@ button.text-block__title {
 
 .statistic--bottom {
   &.statistic--pages-exp {
-    flex-wrap: wrap;
+    display: flex;
+    align-items: flex-start;
+
+    .section__column.section__column--full-width-statistics & {
+      align-items: flex-start;
+    }
+
+    .statistic__pic {
+      display: none;
+
+      @media (min-width: 768px) {
+        display: block;
+        max-width: 260px;
+        margin-left: 0;
+
+        .statistic__graph {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .statistic__numbers {
+      @media (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+
+        .statistic__item {
+          & + .statistic__item {
+            margin-top: 0;
+            margin-left: 20px;
+            margin-bottom: 56px;
+          }
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+
+        .section__column--full-width-statistics & {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+
+          .statistic__item {
+            flex-basis: 40%;
+            & + .statistic__item {
+              margin-top: 0;
+              margin-left: 20px;
+              margin-bottom: 20px;
+            }
+
+            &:last-of-type {
+              margin-bottom: 0;
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 .essay__section.essay__section--date {
+  position: relative;
   margin-top: 36px;
+  z-index: 5;
 }
 
 .post-date {
