@@ -28,7 +28,7 @@
   </head>
   <body>
     <header class="header header--with-dropdown">
-      <div class="container">
+      <div class="container container--wide">
         <div class="header__inner">
           <button class="header-dropdown-control"><span></span><span></span><span></span><span></span></button><a class="logo" href="/"><span class="logo__icon"><img class="icon" src="img/logo.png" width="32" alt="EssaySampler logo picture"/></span><span class="logo__text subtitle subtitle--dark">EssaySampler</span></a>
           <nav class="header__nav">
@@ -258,6 +258,52 @@
         </div>
       </div>
     </div>
+    <!-- Script for dropdown header-->
+    <script>
+      const dropdownTrigger = document.querySelector(".header-dropdown-control");
+      const dropdownMenu = document.querySelector(".header__nav");
+      const submenuTrigger = document.querySelector(".header-navigation__item--submenu");
+      const firstSubmenu = document.querySelector(".first-submenu");
+      const firstMenuBackTrigger = document.querySelector(".first-submenu__back-trigger");
+      const secondSubmenuTrigger = document.querySelector(".first-submenu-list__item--submenu");
+      const secondSubmenu = document.querySelector(".second-submenu");
+      const secondSubmenuBackTrigger = document.querySelector(".second-submenu__back-trigger");
+      
+      document.addEventListener("click", function(e) {
+        if (!dropdownMenu.contains(e.target) && !dropdownTrigger.contains(e.target)) {
+          dropdownTrigger.classList.remove("is-open");
+          dropdownMenu.classList.remove("is-open");
+          firstSubmenu.classList.remove("is-open");
+        }
+      })
+      
+      dropdownTrigger.addEventListener("click", function() {
+        dropdownTrigger.classList.toggle("is-open");
+        dropdownMenu.classList.toggle("is-open");
+      });
+      
+      submenuTrigger.addEventListener("click", function (e) {
+        if (!firstSubmenu.contains(e.target)) {
+          submenuTrigger.classList.toggle("is-open");
+          firstSubmenu.classList.toggle("is-open");
+        }
+      });
+      
+      firstMenuBackTrigger.addEventListener("click", function(e) {
+        e.stopPropagation();
+        firstSubmenu.classList.remove("is-open");
+      });
+      
+      secondSubmenuTrigger.addEventListener("click", function () {
+        secondSubmenu.classList.add("is-open");
+      });
+      
+      secondSubmenuBackTrigger.addEventListener("click", function(e) {
+        e.stopPropagation();
+        secondSubmenu.classList.remove("is-open");
+      });
+      
+    </script>
     <script>
       const reference = document.querySelector(".essay__section--references");
       const fixedCtaSection = document.querySelector(".fixed-cta");
