@@ -1,6 +1,6 @@
 extends layouts/default
 include helpers/mixins
-include ../blocks/modules/header/header
+include ../blocks/modules/header/header-dropdown
 include ../blocks/modules/footer/footer
 
 block variables
@@ -8,7 +8,7 @@ block variables
 block styles
   link(rel="stylesheet" href="styles/essay-page.css")
 block content
-  +header
+  +header-dropdown
   .container
     .breadcrumbs.desktop-only
       ul.breadcrumbs__list
