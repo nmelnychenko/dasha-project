@@ -1,0 +1,267 @@
+@import "../helpers/_variables.scss";
+
+html,
+body {
+  height: 100%;
+  min-height: 100vh;
+}
+
+.page-layout {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  flex-grow: 1;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.breadcrumbs {
+  margin: 29px 0 12px;
+
+  &.mobile-only {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &.desktop-only {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+}
+
+.breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.breadcrumbs__item {
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "\00a0/\00a0";
+    position: relative;
+  }
+
+  &:last-of-type::after {
+    content: none;
+  }
+}
+
+.breadcrumbs__link,
+.breadcrumbs__item,
+.categories-list__item-link,
+.essay-samples-list__item-link {
+  font-size: 14px;
+  line-height: 17px;
+  color: #000;
+  text-decoration: none;
+  font-family: $secondary-font;
+}
+
+.breadcrumbs__link:hover,
+.categories-list__item-link:hover,
+.essay-samples-list__item-link:hover {
+  color: #368CBF;
+}
+
+.section--categories-navigation {
+  padding-bottom: 25px;
+
+  @media (min-width: 768px) {
+    width: 320px;
+    flex-shrink: 0;
+    padding-top: 56px;
+    padding-right: 24px;
+  }
+}
+
+.categories-navigation-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  font-family: $secondary-font;
+  margin: 0 0 12px;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+.categories-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.categories-list__item {
+  flex-basis: calc(50% - 22px);
+  margin-bottom: 12px;
+}
+
+.order-cta {
+  display: block;
+  width: 100%;
+  max-width: 206px;
+  padding: 14px 8px;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 18px;
+  font-family: Montserrat, Gotham, Roboto, "Open Sans", sans-serif;
+  letter-spacing: 0.05em;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  background: #63BF2C;
+  border-color: #63BF2C;
+  color: #fff;
+  box-shadow: 0px 4px 10px rgba(99, 191, 44, 0.4);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+}
+
+.pagination__link {
+  display: block;
+  height: 100%;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.pagination__item {
+  & + & {
+    margin-left: 10px;
+  }
+
+  .pagination__item--prev + & {
+    margin-left: 13px;
+  }
+}
+
+.pagination__item--prev,
+.pagination__item--next {
+  width: 22px;
+  height: 8px;
+}
+
+.pagination__item--next {
+  transform: rotate(180deg);
+}
+
+.section__title {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400;
+  color: #368CBF;
+  font-family: $base-font;
+  margin-bottom: 30px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 24px;
+    font-size: 30px;
+    line-height: 36px;
+
+    .main-content--no-disclaimer & {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.disclaimer {
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  font-family: $secondary-font;
+}
+
+.section--intro {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.sections--new-essay-samples {
+  padding-top: 25px;
+  padding-bottom: 68px;
+}
+
+.essay-samples-list {
+  margin-bottom: 24px;
+}
+
+.essay-samples-list__item {
+  position: relative;
+  padding-left: 23px;
+
+  @media (min-width: 768px) {
+    padding-left: 47px;
+  }
+
+  & + & {
+    margin-top: 16px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 17px;
+    background-image: url("../img/svg/pencil.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (min-width: 768px) {
+      top: 4px
+    }
+  }
+}
+
+.essay-samples-list__item-link {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.new-sample__statistic {
+  display: flex;
+}
+
+.new-sample__statistic-item {
+  display: flex;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  font-family: $secondary-font;
+
+  & + & {
+    margin-left: 16px;
+  }
+}
+
+.new-sample__statistic-number {
+  font-weight: bold;
+}

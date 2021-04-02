@@ -879,7 +879,7 @@ img {
   }
 
   .footer {
-    height: 76px;
+    height: auto;
   }
 
   .footer__nav {
