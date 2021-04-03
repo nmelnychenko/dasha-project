@@ -918,6 +918,8 @@ img {
     background: none;
     box-shadow: none;
     padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .header--with-dropdown .header-navigation__list {
