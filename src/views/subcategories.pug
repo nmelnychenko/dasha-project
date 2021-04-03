@@ -1,0 +1,340 @@
+extends layouts/default
+include helpers/mixins
+include ../blocks/modules/header/header-dropdown
+include ../blocks/modules/footer/footer
+
+block variables
+  - const title = "Essaysampler | Categories page"
+
+block styles
+  link(rel="stylesheet" href="styles/categories.css")
+
+block content
+  .page-layout
+    +header-dropdown
+    .container
+      .breadcrumbs.mobile-only
+        ul.breadcrumbs__list
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Essay samples
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#") Business & Marketing
+          li.breadcrumbs__item.breadcrumbs__item--last
+            span.breadcrumbs__body Liberal arts & humaties
+
+    .container.main-container.container--wide
+      section.section.section--categories-navigation.section--subcategories
+        h2.categories-navigation-title Subcategories
+
+        ul.categories-list
+          li.categories-list__item
+            span.categories-list__item-link
+              | Liberal Arts & Humanities
+
+            ul.subcategories-list
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Anthropology
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Archeology
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Classic English literature
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Communications
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Culture and Ethnic Studies
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Education
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") English
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") History
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Human & Family
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Development
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Journalism
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Linguistics
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Literature
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Logic
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Military
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Studies
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Philosophy
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Political science
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Psychology
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Public Administration
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Public Policy
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Religious studies
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Shakespeare studies
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Social Work
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Sociology
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Sports
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") Women and gender studies
+
+              li.subcategories-list__item
+                a.subcategories-list__item-link(href="#") World literature
+
+        //a.order-cta(href="#") ORDER ESSAY
+
+
+
+
+
+      .main-content
+        section.section.section--intro
+          .breadcrumbs.desktop-only
+            ul.breadcrumbs__list
+              li.breadcrumbs__item
+                a.breadcrumbs__link(href="#") Essay samples
+              li.breadcrumbs__item
+                a.breadcrumbs__link(href="#") Business & Marketing
+              li.breadcrumbs__item.breadcrumbs__item--last
+                span.breadcrumbs__body Liberal arts & humaties
+
+          h2.section__title List of Essay Samples
+
+          p.disclaimer
+            | Having superior negotiation skills is conductive to the success in personal life and career development.
+            | This essay will indicate that my natural preferences for different influencing tactics,  Having superior
+            | negotiation skills is conductive to the success in personal life and career development. This essay will
+            | indicate that my natural preferences for different influencing tactics, Having superior negotiation skills
+            | is conductive to the success in personal life and career development. This essay will indicate that my
+            | natural preferences for different influencing tactics, Having superior negotiation skills is conductive
+            | to the success in personal life and career development. This essay will indicate that my natural preferences
+            | for different influencing tactics,
+
+        section.section.sections--new-essay-samples
+          h2.section__title New Essay Samples
+
+          ul.essay-samples-list
+            li.essay-samples-list__item
+              a.essay-samples-list__item-link(href="#")
+                | How obtaining a Doctor of Nursing Practice (DNP) degree in leadership will align with your current or
+                | future role as a nurse leader and the mission of TUN?
+
+              .new-sample__statistic
+                .new-sample__statistic-item
+                  .new-sample__statistic-number
+                    | 924
+                  .new-sample__statistic-desc
+                    | &nbsp;words
+
+                .new-sample__statistic-item
+                  .new-sample__statistic-number
+                    | 3
+                  .new-sample__statistic-desc
+                    | &nbsp;pages
+
+            li.essay-samples-list__item
+              a.essay-samples-list__item-link(href="#")
+                | Goodfellas
+
+              .new-sample__statistic
+                .new-sample__statistic-item
+                  .new-sample__statistic-number
+                    | 924
+                  .new-sample__statistic-desc
+                    | &nbsp;words
+
+                .new-sample__statistic-item
+                  .new-sample__statistic-number
+                    | 3
+                  .new-sample__statistic-desc
+                    | &nbsp;pages
+
+            li.essay-samples-list__item
+              a.essay-samples-list__item-link(href="#")
+                | Reflection on Stuart Hall, “Cultural Identity and Diaspora.” Identity: Community, Culture, Difference
+
+              .new-sample__statistic
+                .new-sample__statistic-item
+                  .new-sample__statistic-number
+                    | 924
+                  .new-sample__statistic-desc
+                    | &nbsp;words
+
+                .new-sample__statistic-item
+                  .new-sample__statistic-number
+                    | 3
+                  .new-sample__statistic-desc
+                    | &nbsp;pages
+
+            li.essay-samples-list__item
+              a.essay-samples-list__item-link(href="#")
+                | How obtaining a Doctor of Nursing Practice (DNP) degree in leadership will align with your current or
+                | future role as a nurse leader and the mission of TUN?
+
+              .new-sample__statistic
+                .new-sample__statistic-item
+                  .new-sample__statistic-number
+                    | 924
+                  .new-sample__statistic-desc
+                    | &nbsp;words
+
+                .new-sample__statistic-item
+                  .new-sample__statistic-number
+                    | 3
+                  .new-sample__statistic-desc
+                    | &nbsp;pages
+
+            li.essay-samples-list__item
+              a.essay-samples-list__item-link(href="#")
+                | Reflection on Stuart Hall, “Cultural Identity and Diaspora.” Identity: Community, Culture, Difference
+
+              .new-sample__statistic
+                .new-sample__statistic-item
+                  .new-sample__statistic-number
+                    | 924
+                  .new-sample__statistic-desc
+                    | &nbsp;words
+
+                .new-sample__statistic-item
+                  .new-sample__statistic-number
+                    | 3
+                  .new-sample__statistic-desc
+                    | &nbsp;pages
+
+            li.essay-samples-list__item
+              a.essay-samples-list__item-link(href="#")
+                | Goodfellas
+
+              .new-sample__statistic
+                .new-sample__statistic-item
+                  .new-sample__statistic-number
+                    | 924
+                  .new-sample__statistic-desc
+                    | &nbsp;words
+
+                .new-sample__statistic-item
+                  .new-sample__statistic-number
+                    | 3
+                  .new-sample__statistic-desc
+                    | &nbsp;pages
+
+            li.essay-samples-list__item
+              a.essay-samples-list__item-link(href="#")
+                | Goodfellas
+
+              .new-sample__statistic
+                .new-sample__statistic-item
+                  .new-sample__statistic-number
+                    | 924
+                  .new-sample__statistic-desc
+                    | &nbsp;words
+
+                .new-sample__statistic-item
+                  .new-sample__statistic-number
+                    | 3
+                  .new-sample__statistic-desc
+                    | &nbsp;pages
+
+
+          ul.pagination
+            li.pagination__item.pagination__item--prev
+              a.pagination__link.link(href="#")
+                svg(width='22' height='8' fill='none' xmlns='http://www.w3.org/2000/svg')
+                  path(d='M.646446 3.64645c-.195261.19526-.195261.51184 0 .7071L3.82843 7.53553c.19526.19527.51184.19527.7071 0 .19527-.19526.19527-.51184 0-.7071L1.70711 4l2.82842-2.82843c.19527-.195259.19527-.511842 0-.707104-.19526-.195262-.51184-.195262-.7071 0L.646446 3.64645zM22 3.5H1v1h21v-1z' fill='#368CBF')
+            li.pagination__item.heading
+              a.pagination__link.link(href="#")
+                | 1
+            li.pagination__item.heading
+              a.pagination__link.link(href="#")
+                | 2
+            li.pagination__item.heading
+              a.pagination__link.link(href="#")
+                | 3
+            li.pagination__item.pagination__item--dots.heading
+              | ...
+            li.pagination__item.pagination__item--next
+              a.pagination__link(href="#")
+                svg(width='22' height='8' fill='none' xmlns='http://www.w3.org/2000/svg')
+                  path(d='M.646446 3.64645c-.195261.19526-.195261.51184 0 .7071L3.82843 7.53553c.19526.19527.51184.19527.7071 0 .19527-.19526.19527-.51184 0-.7071L1.70711 4l2.82842-2.82843c.19527-.195259.19527-.511842 0-.707104-.19526-.195262-.51184-.195262-.7071 0L.646446 3.64645zM22 3.5H1v1h21v-1z' fill='#368CBF')
+
+
+    +footer
+  // Script for dropdown header
+  script.
+    const dropdownTrigger = document.querySelector(".header-dropdown-control");
+    const dropdownMenu = document.querySelector(".header__nav");
+    const submenuTrigger = document.querySelector(".header-navigation__item--submenu");
+    const firstSubmenu = document.querySelector(".first-submenu");
+    const firstMenuBackTrigger = document.querySelector(".first-submenu__back-trigger");
+    const secondSubmenuTrigger = document.querySelector(".first-submenu-list__item--submenu");
+    const secondSubmenu = document.querySelector(".second-submenu");
+    const secondSubmenuBackTrigger = document.querySelector(".second-submenu__back-trigger");
+
+    document.addEventListener("click", function(e) {
+      if (!dropdownMenu.contains(e.target) && !dropdownTrigger.contains(e.target)) {
+        dropdownTrigger.classList.remove("is-open");
+        dropdownMenu.classList.remove("is-open");
+        firstSubmenu.classList.remove("is-open");
+      }
+    })
+
+    dropdownTrigger.addEventListener("click", function() {
+      dropdownTrigger.classList.toggle("is-open");
+      dropdownMenu.classList.toggle("is-open");
+    });
+
+    submenuTrigger.addEventListener("click", function (e) {
+      if (!firstSubmenu.contains(e.target)) {
+        submenuTrigger.classList.toggle("is-open");
+        firstSubmenu.classList.toggle("is-open");
+      }
+    });
+
+    firstMenuBackTrigger.addEventListener("click", function(e) {
+      e.stopPropagation();
+      firstSubmenu.classList.remove("is-open");
+    });
+
+    secondSubmenuTrigger.addEventListener("click", function () {
+      secondSubmenu.classList.add("is-open");
+    });
+
+    secondSubmenuBackTrigger.addEventListener("click", function(e) {
+      e.stopPropagation();
+      secondSubmenu.classList.remove("is-open");
+    });
