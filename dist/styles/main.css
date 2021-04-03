@@ -717,6 +717,7 @@ img {
   font-weight: bold;
   color: #fff;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .header--with-dropdown .header-navigation__item-body,
@@ -983,6 +984,10 @@ img {
 
   .header--with-dropdown .first-submenu__back-trigger {
     display: none;
+  }
+
+  .header--with-dropdown .second-submenu-list__item-link {
+    text-transform: initial;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */
