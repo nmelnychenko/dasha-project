@@ -225,6 +225,7 @@ body {
 
   .breadcrumbs.desktop-only {
     display: block;
+    margin-bottom: 27px;
   }
 
   .section--categories-navigation {
@@ -244,7 +245,7 @@ body {
   }
 
   .section__title {
-    margin-bottom: 24px;
+    margin-bottom: 40px;
     font-size: 30px;
     line-height: 36px;
   }
@@ -253,12 +254,26 @@ body {
     margin-bottom: 20px;
   }
 
+  .disclaimer {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
   .essay-samples-list__item {
     padding-left: 47px;
   }
 
+  .essay-samples-list__item + .essay-samples-list__item {
+    margin-top: 20px;
+  }
+
   .essay-samples-list__item::before {
     top: 4px;
+  }
+
+  .essay-samples-list__item-link {
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 /*# sourceMappingURL=maps/categories.css.map */

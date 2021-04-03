@@ -35,6 +35,7 @@ body {
 
     @media (min-width: 768px) {
       display: block;
+      margin-bottom: 27px;
     }
   }
 }
@@ -180,7 +181,7 @@ body {
   margin-bottom: 30px;
 
   @media (min-width: 768px) {
-    margin-bottom: 24px;
+    margin-bottom: 40px;
     font-size: 30px;
     line-height: 36px;
 
@@ -195,6 +196,11 @@ body {
   line-height: 17px;
   color: #000000;
   font-family: $secondary-font;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 26px;
+  }
 }
 
 .section--intro {
@@ -221,6 +227,10 @@ body {
 
   & + & {
     margin-top: 16px;
+
+    @media (min-width: 768px) {
+      margin-top: 20px;
+    }
   }
 
   &::before {
@@ -244,6 +254,11 @@ body {
 .essay-samples-list__item-link {
   display: inline-block;
   margin-bottom: 10px;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .new-sample__statistic {
