@@ -286,13 +286,7 @@
   .first-submenu-list__item-link,
   .second-submenu-list__item-link {
     font-weight: 400;
-  }
-
-  .second-submenu-list__item-link {
-
-    @media (min-width: 1440px) {
-      text-transform: initial;
-    }
+    text-transform: initial;
   }
 
   .second-submenu {

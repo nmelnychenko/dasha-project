@@ -763,6 +763,7 @@ img {
 .header--with-dropdown .first-submenu-list__item-link,
 .header--with-dropdown .second-submenu-list__item-link {
   font-weight: 400;
+  text-transform: initial;
 }
 
 .header--with-dropdown .second-submenu {
@@ -984,10 +985,6 @@ img {
 
   .header--with-dropdown .first-submenu__back-trigger {
     display: none;
-  }
-
-  .header--with-dropdown .second-submenu-list__item-link {
-    text-transform: initial;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */
