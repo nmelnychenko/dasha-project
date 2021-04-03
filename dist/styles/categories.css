@@ -219,6 +219,10 @@ body {
     display: flex;
   }
 
+  .main-container .main-content {
+    max-width: 830px;
+  }
+
   .breadcrumbs.mobile-only {
     display: none;
   }

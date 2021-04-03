@@ -18,6 +18,10 @@ body {
 
   @media (min-width: 768px) {
     display: flex;
+
+    .main-content {
+      max-width: 830px;
+    }
   }
 }
 
