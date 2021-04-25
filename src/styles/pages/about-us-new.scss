@@ -1,5 +1,9 @@
 .section--intro {
   padding: 20px 0;
+
+  @media (min-width: 768px) {
+    padding-top: 120px;
+  }
 }
 
 .page-title {
