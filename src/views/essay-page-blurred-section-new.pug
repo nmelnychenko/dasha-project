@@ -80,6 +80,7 @@ block content
             section.essay__section.text-block.essay__section--date
               .post-date 01/01 /2021 Created
 
+
         .section__column.section__column--full-width-statistics
           .statistic.statistic--bottom.statistic--pages-exp
             .statistic__numbers
@@ -98,13 +99,6 @@ block content
 
   +footer
 
-  .fixed-cta.fixed-cta--with-title.is-sticky
-    .fixed-cta__tag Essay sample
-    .fixed-cta__title
-      | Why negotiation skill is so important in leadership
-    button.fixed-cta__action.order-action.order-action--secondary.js-modal-trigger(data-href="link-to-order-here")
-      | ORDER ESSAY
-
   .modal.js-modal
     .modal__backdrop.js-modal-close
     .modal__body
@@ -119,6 +113,13 @@ block content
             circle(cx='16' cy='16' r='15.5' fill='white' stroke='#368CBF')
             path(fill-rule='evenodd' clip-rule='evenodd' d='M8.06055 25.0607L24.0605 9.06066L22.9999 8L6.99989 24L8.06055 25.0607Z' fill='#368CBF')
             path(fill-rule='evenodd' clip-rule='evenodd' d='M6.91099 9.16239L23.0996 24.9716L24.1476 23.8984L7.959 8.08922L6.91099 9.16239Z' fill='#368CBF')
+
+  .fixed-cta.fixed-cta--with-title.is-sticky
+    .fixed-cta__tag Essay sample
+    .fixed-cta__title
+      | Why negotiation skill is so important in leadership
+    button.fixed-cta__action.order-action.order-action--secondary.js-modal-trigger(data-href="link-to-order-here")
+      | ORDER ESSAY
 
   // Script for dropdown header
   script.
@@ -185,4 +186,42 @@ block content
       element.addEventListener("click", function(e) {
         modal.classList.remove("is-visible");
       });
+    });
+
+  script.
+    const fixedCtaElement = document.querySelector(".fixed-cta");
+    const essayElement = document.querySelector(".eassay");
+    const startPosition = fixedCtaElement.getBoundingClientRect().bottom;
+    fixedCtaElement.classList.add("is-absolute");
+
+    let last_known_scroll_position = 0;
+    let ticking = false;
+
+    const changeFixedToAbsolute = (element, shift, scrollPosition) => {
+      console.log(260 + scrollPosition);
+
+        if (element.getBoundingClientRect().bottom + shift <= essayElement.getBoundingClientRect().bottom) {
+          element.setAttribute("style", `top: ${260 + scrollPosition}px`);
+        }
+
+        //- if (element.getBoundingClientRect().bottom + shift < essayElement.getBoundingClientRect().bottom && element.classList.contains("is-absolute")) {
+        //-   element.classList.remove("is-absolute");
+        //-   element.classList.add("is-fixed");
+        //-   element.removeAttribute("style");
+        //- }
+
+        console.log(element.getBoundingClientRect().bottom + shift <= essayElement.getBoundingClientRect().bottom)
+    }
+
+    window.addEventListener('scroll', function(e) {
+      last_known_scroll_position = window.scrollY;
+
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          changeFixedToAbsolute(fixedCtaElement, 40, last_known_scroll_position);
+          ticking = false;
+        });
+
+        ticking = true;
+      }
     });

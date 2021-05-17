@@ -23,8 +23,8 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png"><link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Solway:400,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.min.css">
-    <link rel="stylesheet" href="styles/essay-page.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/essay-page.css">
   </head>
   <body>
     <header class="header header--with-dropdown">
@@ -216,11 +216,6 @@
         </nav>
       </div>
     </footer>
-    <div class="fixed-cta fixed-cta--with-title is-sticky">
-      <div class="fixed-cta__tag">Essay sample</div>
-      <div class="fixed-cta__title">Why negotiation skill is so important in leadership</div>
-      <button class="fixed-cta__action order-action order-action--secondary js-modal-trigger" data-href="link-to-order-here">ORDER ESSAY</button>
-    </div>
     <div class="modal js-modal">
       <div class="modal__backdrop js-modal-close"></div>
       <div class="modal__body">
@@ -238,6 +233,11 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="fixed-cta fixed-cta--with-title is-sticky">
+      <div class="fixed-cta__tag">Essay sample</div>
+      <div class="fixed-cta__title">Why negotiation skill is so important in leadership</div>
+      <button class="fixed-cta__action order-action order-action--secondary js-modal-trigger" data-href="link-to-order-here">ORDER ESSAY</button>
     </div>
     <!-- Script for dropdown header-->
     <script>
@@ -286,10 +286,10 @@
       
     </script>
     <script>
-      const modalTrigers = document.querySelectorAll(`.min.js-modal-trigger`);
-      const modal = document.querySelector(`.min.js-modal`);
-      const modalCloseTriggers = document.querySelectorAll(`.min.js-modal-close`);
-      const orderLink = document.querySelector(`.min.js-order-link`);
+      const modalTrigers = document.querySelectorAll(`.js-modal-trigger`);
+      const modal = document.querySelector(`.js-modal`);
+      const modalCloseTriggers = document.querySelectorAll(`.js-modal-close`);
+      const orderLink = document.querySelector(`.js-order-link`);
       
       Array.prototype.slice.call(modalTrigers).forEach(function(element) {
         element.addEventListener("click", function(e) {
@@ -305,6 +305,45 @@
         element.addEventListener("click", function(e) {
           modal.classList.remove("is-visible");
         });
+      });
+      
+    </script>
+    <script>
+      const fixedCtaElement = document.querySelector(".fixed-cta");
+      const essayElement = document.querySelector(".eassay");
+      const startPosition = fixedCtaElement.getBoundingClientRect().bottom;
+      fixedCtaElement.classList.add("is-absolute");
+      
+      let last_known_scroll_position = 0;
+      let ticking = false;
+      
+      const changeFixedToAbsolute = (element, shift, scrollPosition) => {
+        console.log(260 + scrollPosition);
+      
+          if (element.getBoundingClientRect().bottom + shift <= essayElement.getBoundingClientRect().bottom) {
+            element.setAttribute("style", `top: ${260 + scrollPosition}px`);
+          }
+      
+          //- if (element.getBoundingClientRect().bottom + shift < essayElement.getBoundingClientRect().bottom && element.classList.contains("is-absolute")) {
+          //-   element.classList.remove("is-absolute");
+          //-   element.classList.add("is-fixed");
+          //-   element.removeAttribute("style");
+          //- }
+      
+          console.log(element.getBoundingClientRect().bottom + shift <= essayElement.getBoundingClientRect().bottom)
+      }
+      
+      window.addEventListener('scroll', function(e) {
+        last_known_scroll_position = window.scrollY;
+      
+        if (!ticking) {
+          window.requestAnimationFrame(function() {
+            changeFixedToAbsolute(fixedCtaElement, 40, last_known_scroll_position);
+            ticking = false;
+          });
+      
+          ticking = true;
+        }
       });
     </script>
   </body>

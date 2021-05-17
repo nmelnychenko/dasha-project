@@ -771,6 +771,7 @@ button.text-block__title {
   text-decoration: none;
   text-align: center;
   font-weight: 700;
+  cursor: pointer;
 
   &--secondary {
     background: #63BF2C;
@@ -1052,7 +1053,7 @@ button.text-block__title {
 
     .statistic__pic {
       display: none;
-      
+
       @media (min-width: 768px) {
         display: block;
         margin-left: auto;
@@ -1176,5 +1177,136 @@ button.text-block__title {
   @media (min-width: 768px) {
     font-size: 16px;
     line-height: 20px;
+  }
+}
+
+.new-order-modal {
+  .modal__body {
+    top: 120px;
+    width: calc(100% - 44px);
+    max-width: 278px;
+    padding: 24px 26px 18px;
+    transform: translateX(-50%);
+    text-align: center;
+    background-image: none;
+    overflow: visible;
+
+    @media (min-width: 960px) {
+      top: 100px;
+      width: 704px;
+      max-width: 704px;
+      padding: 50px 55px;
+    }
+  }
+
+  .modal__close {
+    cursor: pointer;
+
+    @media (min-width: 768px) {
+      display: block;
+      top: -4px;
+      right: -4px;
+      transform: translate(100%, -100%);
+    }
+  }
+}
+
+.new-order-modal__title {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $secondary-font;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+
+  @media (min-width: 960px) {
+    font-size: 30px;
+    line-height: 37px;
+    margin-bottom: 52px;
+  }
+}
+
+.new-order-modal__subtitle {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $secondary-font;
+  margin-bottom: 26px;
+
+  @media (min-width: 960px) {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 46px;
+  }
+}
+
+.new-order-modal__actions {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+
+  @media (min-width: 960px) {
+    margin-bottom: 74px;
+  }
+
+  .line {
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    z-index: -1;
+    background: #368CBF;
+    left: -26px;
+    right: -26px;
+
+    @media (min-width: 960px) {
+      left: -55px;
+      right: -55px;
+    }
+  }
+}
+
+.essay-sampler-features {
+  display: flex;
+
+  @media (min-width: 960px) {
+    justify-content: center;
+  }
+}
+
+.essay-sampler-features__item {
+  display: flex;
+  flex-basis: calc(33% - 2px);
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1px;
+
+  @media (min-width: 960px) {
+    flex-direction: row;
+    text-align: left;
+    flex-basis: auto;
+    margin-right: 40px;
+  }
+}
+
+.essay-sampler-features__item-icon {
+  height: 38px;
+  width: auto;
+  margin-bottom: 4px;
+
+  @media (min-width: 960px) {
+    margin-bottom: 0;
+    margin-right: 8px;
+  }
+}
+
+.essay-sampler-features__item-title {
+  font-size: 10px;
+  line-height: 12px;
+  font-weight: 400;
+  font-family: $secondary-font;
+
+  @media (min-width: 960px) {
+    max-width: 100px;
+    font-size: 14px;
+    line-height: 17px;
   }
 }
