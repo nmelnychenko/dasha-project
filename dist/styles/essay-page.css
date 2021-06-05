@@ -1140,6 +1140,7 @@ button.text-block__title:hover {
     max-width: 100px;
     font-size: 14px;
     line-height: 17px;
+    flex-shrink: 0;
   }
 }
 

@@ -1284,6 +1284,10 @@ button.text-block__title {
     text-align: left;
     flex-basis: auto;
     margin-right: 40px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 }
 
@@ -1308,5 +1312,6 @@ button.text-block__title {
     max-width: 100px;
     font-size: 14px;
     line-height: 17px;
+    flex-shrink: 0;
   }
 }
