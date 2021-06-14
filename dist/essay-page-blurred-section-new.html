@@ -23,8 +23,8 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png"><link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Solway:400,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/essay-page.css">
+    <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="styles/essay-page.min.css">
   </head>
   <body>
     <header class="header header--with-dropdown">
@@ -239,57 +239,11 @@
       <div class="fixed-cta__title">Why negotiation skill is so important in leadership</div>
       <button class="fixed-cta__action order-action order-action--secondary js-modal-trigger" data-href="link-to-order-here">ORDER ESSAY</button>
     </div>
-    <!-- Script for dropdown header-->
     <script>
-      const dropdownTrigger = document.querySelector(".header-dropdown-control");
-      const dropdownMenu = document.querySelector(".header__nav");
-      const submenuTrigger = document.querySelector(".header-navigation__item--submenu");
-      const firstSubmenu = document.querySelector(".first-submenu");
-      const firstMenuBackTrigger = document.querySelector(".first-submenu__back-trigger");
-      const secondSubmenuTrigger = document.querySelector(".first-submenu-list__item--submenu");
-      const secondSubmenu = document.querySelector(".second-submenu");
-      const secondSubmenuBackTrigger = document.querySelector(".second-submenu__back-trigger");
-      
-      document.addEventListener("click", function(e) {
-        if (!dropdownMenu.contains(e.target) && !dropdownTrigger.contains(e.target)) {
-          dropdownTrigger.classList.remove("is-open");
-          dropdownMenu.classList.remove("is-open");
-          firstSubmenu.classList.remove("is-open");
-        }
-      })
-      
-      dropdownTrigger.addEventListener("click", function() {
-        dropdownTrigger.classList.toggle("is-open");
-        dropdownMenu.classList.toggle("is-open");
-      });
-      
-      submenuTrigger.addEventListener("click", function (e) {
-        if (!firstSubmenu.contains(e.target)) {
-          submenuTrigger.classList.toggle("is-open");
-          firstSubmenu.classList.toggle("is-open");
-        }
-      });
-      
-      firstMenuBackTrigger.addEventListener("click", function(e) {
-        e.stopPropagation();
-        firstSubmenu.classList.remove("is-open");
-      });
-      
-      secondSubmenuTrigger.addEventListener("click", function () {
-        secondSubmenu.classList.add("is-open");
-      });
-      
-      secondSubmenuBackTrigger.addEventListener("click", function(e) {
-        e.stopPropagation();
-        secondSubmenu.classList.remove("is-open");
-      });
-      
-    </script>
-    <script>
-      const modalTrigers = document.querySelectorAll(`.js-modal-trigger`);
-      const modal = document.querySelector(`.js-modal`);
-      const modalCloseTriggers = document.querySelectorAll(`.js-modal-close`);
-      const orderLink = document.querySelector(`.js-order-link`);
+      const modalTrigers = document.querySelectorAll(`.min.js-modal-trigger`);
+      const modal = document.querySelector(`.min.js-modal`);
+      const modalCloseTriggers = document.querySelectorAll(`.min.js-modal-close`);
+      const orderLink = document.querySelector(`.min.js-order-link`);
       
       Array.prototype.slice.call(modalTrigers).forEach(function(element) {
         element.addEventListener("click", function(e) {
