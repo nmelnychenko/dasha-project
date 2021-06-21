@@ -55,39 +55,39 @@ document.addEventListener("click", function(e) {
   }
 })
 
-if (dropdownTrigger.length) {
-  dropdownTrigger.on("click", function() {
-    dropdownTrigger.toggleClass("is-open");
-    dropdownMenu.toggleClass("is-open");
-  });
-}
+dropdownTrigger.on("click", function() {
+  dropdownTrigger.toggleClass("is-open");
+  dropdownMenu.toggleClass("is-open");
+});
 
-if (submenuTrigger.length) {
-  submenuTrigger.on("click", function(e) {
+
+submenuTrigger.each(function() {
+  $(this).on("click", function(e) {
     if (!firstSubmenu[0].contains(e.target)) {
       submenuTrigger.toggleClass("is-open");
       firstSubmenu.toggleClass("is-open");
     }
-  });
-}
+  })
+});
 
-if (firstMenuBackTrigger.length) {
-  firstMenuBackTrigger.on("click", function(e) {
+firstMenuBackTrigger.each(function() {
+  $(this).on("click", function(e) {
     e.stopPropagation();
+
     $(this).parent().removeClass("is-open");
   });
-}
+});
 
-if (secondSubmenuTrigger.length) {
-  secondSubmenuTrigger.on("click", function() {
+secondSubmenuTrigger.each(function() {
+  $(this).on("click", function() {
     $(this).find(secondSubmenu).addClass("is-open");
   });
-}
+});
 
-if (secondSubmenuBackTrigger.length) {
-  secondSubmenuBackTrigger.on("click", function(e) {
+secondSubmenuBackTrigger.each(function() {
+  $(this).on("click", function(e) {
     e.stopPropagation();
 
     $(this).parent().removeClass("is-open");
   });
-}
+});
