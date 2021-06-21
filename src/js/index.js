@@ -48,7 +48,7 @@ const secondSubmenu = $(".second-submenu");
 const secondSubmenuBackTrigger = $(".second-submenu__back-trigger");
 
 document.addEventListener("click", function(e) {
-  if (!dropdownMenu[0].contains(e.target) && !dropdownTrigger.contains(e.target)) {
+  if (!dropdownMenu[0].contains(e.target) && !dropdownTrigger[0].contains(e.target)) {
     dropdownTrigger.removeClass("is-open");
     dropdownMenu.removeClass("is-open");
     firstSubmenu.removeClass("is-open");
@@ -56,15 +56,15 @@ document.addEventListener("click", function(e) {
 })
 
 if (dropdownTrigger.length) {
-  dropdownTrigger.addEventListener("click", function() {
+  dropdownTrigger.on("click", function() {
     dropdownTrigger.toggleClass("is-open");
     dropdownMenu.toggleClass("is-open");
   });
 }
 
 if (submenuTrigger.length) {
-  submenuTrigger.addEventListener("click", function(e) {
-    if (!firstSubmenu.contains(e.target)) {
+  submenuTrigger.on("click", function(e) {
+    if (!firstSubmenu[0].contains(e.target)) {
       submenuTrigger.toggleClass("is-open");
       firstSubmenu.toggleClass("is-open");
     }
@@ -72,21 +72,22 @@ if (submenuTrigger.length) {
 }
 
 if (firstMenuBackTrigger.length) {
-  firstMenuBackTrigger.addEventListener("click", function(e) {
+  firstMenuBackTrigger.on("click", function(e) {
     e.stopPropagation();
-    $(this).parent.removeClass("is-open");
+    $(this).parent().removeClass("is-open");
   });
 }
 
 if (secondSubmenuTrigger.length) {
-  secondSubmenuTrigger.addEventListener("click", function() {
+  secondSubmenuTrigger.on("click", function() {
     $(this).find(secondSubmenu).addClass("is-open");
   });
 }
 
 if (secondSubmenuBackTrigger.length) {
-  secondSubmenuBackTrigger.addEventListener("click", function(e) {
+  secondSubmenuBackTrigger.on("click", function(e) {
     e.stopPropagation();
-    $(this).parent.removeClass("is-open");
+
+    $(this).parent().removeClass("is-open");
   });
 }
