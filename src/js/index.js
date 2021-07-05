@@ -80,6 +80,7 @@ firstMenuBackTrigger.each(function() {
 
 secondSubmenuTrigger.each(function() {
   $(this).on("click", function() {
+    console.log($(this));
     $(this).find(secondSubmenu).addClass("is-open");
   });
 });
